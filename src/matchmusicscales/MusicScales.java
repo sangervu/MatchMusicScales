@@ -27,18 +27,18 @@ public class MusicScales {
         //Enigmatic heptatonic scale (Giuseppe Verdi/enigmatic, mysterious, puzzling, ambiguous, unclear)
         points.put("HmWWWHH", "Enigmatic scale");
         
-        //Gypsy
-        points.put("WHmHHWW", "Gypsy scale[a]");
+        // Neapolitan Major
         points.put("HWWWWWH", "Neapolitan major scale");
+        points.put("WWHHWWW", "Major Locrian scale");
         
+         // Neopolitan minor
+        points.put("HWWWHmH", "Neapolitan minor scale");
+        points.put("WHmHHWW", "Gypsy scale[a]");       
+           
         //Harmoinic Major
         points.put("WWHWHmH", "Harmonic major scale");  
         points.put("WHmHWWH", "Pfluke scale"); 
-        
-        // Major Locrian         
-        points.put("WWHHWWW", "Major Locrian scale");
-        points.put("HWWWHmH", "Neapolitan minor scale");
-        
+              
         //Persian
         points.put("HmHHWmH", "Persian scale");
        
@@ -64,31 +64,29 @@ public class MusicScales {
         //harmonic minor modes (heptatonic)   
         points.put("HWHWWHm", "Superlocrian hm scale (Locrian b4)");
         points.put("mHWHWWH", "Lydian #2 hm scale");
-        points.put("HmHWHWW", "Phrygian dominant hm scale");
-        points.put("HmHWHWW", "Phrygian dominant scale");
+        points.put("HmHWHWW", "Phrygian dominant hm scale, Spanish Gypsy Scales");
         points.put("WHmHWHW", "Dorian #4 hm scale (Ukrainian Dorian scale)");
         points.put("WWHmHWH", "Ionian #5 hm scale");
         points.put("HWWHmHW", "Locrian #6 hm scale");
         points.put("WHWWHmH", "Harmonic minor scale (hm)");
         
-        //Jazz scales (heptatonic)   
+        //"Jazz" scales (heptatonic)   
         points.put("mWWHHmH", "Blues scale");
         points.put("WWHWHHH", "Bebop dominant scale");
         points.put("WWHHHWH", "Major bebop scale");
-        points.put("mWWHHmH", "Blues scale");
-        
-        //Flamenco
-        points.put("HmHHHmH", "Flamenco mode");
         
         //Double harmonic scales (heptatonic)
-        points.put("HmHWHmH", "Double harmonic major, Gypsy Major, 'Chopin' scale");
+        //Also known as: Major Romani, Hungarian Romani Persian, Double Harmonic Major, Enigmatic, Byzantine,
+        //Flamenco Mode, Bhairav That, Bhairav Theta, Mela Mayamalavagaula, Raga Paraj, Kalingada, Gaulipantu,
+        //Lalitapancamam, Chromatic 2nd Byzantine Liturgical, Hitzazkiar, Maqam Zengule, Hijaz Kar, Suzidil
+        points.put("HmHWHmH", "Double harmonic major, Flamenco mode, Gypsy Major, 'Chopin' scale");
         points.put("mHWHmHH", "Lydian ♯2 ♯6");
         points.put("HWHmHmH", "Ultraphrygian");
-        points.put("WHmHHmH", "Hungarian Gypsy minor (Flamenco), Algerian");
+        points.put("WHmHHmH", "Hungarian Gypsy minor (Flamenco), 'Lizt scale', Algerian");
         points.put("HmHHmHW", "Oriental");
         points.put("mHHmHWH", "Ionian ♯2 ♯5");
         points.put("HHmHWHm", "Locrian double flat3 double flat7");
-        
+       
         //octatonic scales
         points.put("WHWHWHWH", "Octatonic scale");
         points.put("HWHWHWHW", "Diminished scale");
