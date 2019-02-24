@@ -332,41 +332,41 @@ public class OctatonicIntervals {
                 }
                 break;
 
-            case "5": //Viisi intervallia syötetty (OK)
+            case "6": //Kuusi intervallia syötetty (OK)
                 scaleCounter = -1;
                 for (int counterOut = 0; counterOut <= 4; counterOut++) {
                     switch (counterOut) {
                         case 1:
-                            octatonicIntervals[5] = String.valueOf('W');
+                            octatonicIntervals[6] = String.valueOf('W');
 
-                            this.octatonicIntervalsAll = gen.getSeventhIntervals(octatonicIntervals, scaleCounter);
+                            this.octatonicIntervalsAll = gen.getEigthIntervals(octatonicIntervals, scaleCounter);
                             scaleCounter = gen.getScaleCounter();
 
                             break;
                         case 2:
-                            octatonicIntervals[5] = String.valueOf(H);
+                            octatonicIntervals[6] = String.valueOf(H);
 
-                            this.octatonicIntervalsAll = gen.getSeventhIntervals(octatonicIntervals, scaleCounter);
+                            this.octatonicIntervalsAll = gen.getEigthIntervals(octatonicIntervals, scaleCounter);
                             scaleCounter = gen.getScaleCounter();
 
                             break;
                         case 3:
-                            octatonicIntervals[5] = String.valueOf(m);
+                            octatonicIntervals[6] = String.valueOf(m);
 
-                            this.octatonicIntervalsAll = gen.getSeventhIntervals(octatonicIntervals, scaleCounter);
+                            this.octatonicIntervalsAll = gen.getEigthIntervals(octatonicIntervals, scaleCounter);
                             scaleCounter = gen.getScaleCounter();
                             break;
                         case 4:
-                            octatonicIntervals[5] = String.valueOf(M);
+                            octatonicIntervals[6] = String.valueOf(M);
 
-                            this.octatonicIntervalsAll = gen.getSeventhIntervals(octatonicIntervals, scaleCounter);
+                            this.octatonicIntervalsAll = gen.getEigthIntervals(octatonicIntervals, scaleCounter);
                             scaleCounter = gen.getScaleCounter();
                             break;
                     }
                 }
                 break;
 
-            case "7": //Seitsemän intervallia syötetty
+            case "7": //Seitsemän intervallia syötetty (OK)
                 scaleCounter = -1;
                 this.octatonicIntervalsAll = gen.getEigthIntervals(octatonicIntervals, scaleCounter);
                 scaleCounter = gen.getScaleCounter();
