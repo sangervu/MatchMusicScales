@@ -138,7 +138,7 @@ public class MainActivity {
                         }
                     }
                 } else {
-                    System.out.println("Intervalleja ei saa olla alle kolme, tai yli kuusi");
+                    System.out.println("Intervalleja ei saa olla alle kolme, tai yli kahdeksan");
                 }
 
                 String[] octatonicIntervalsAll = octatonic.getAllOctatonicIntervals(Integer.toString(intervallit.length()));

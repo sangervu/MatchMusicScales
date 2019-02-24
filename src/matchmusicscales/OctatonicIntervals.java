@@ -368,7 +368,7 @@ public class OctatonicIntervals {
 
             case "7": //Seitsemän intervallia syötetty
                 scaleCounter = -1;
-                this.octatonicIntervalsAll = gen.getSeventhIntervals(octatonicIntervals, scaleCounter);
+                this.octatonicIntervalsAll = gen.getEigthIntervals(octatonicIntervals, scaleCounter);
                 scaleCounter = gen.getScaleCounter();
                 break;
 
