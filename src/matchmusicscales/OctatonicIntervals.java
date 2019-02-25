@@ -1,4 +1,5 @@
 package matchmusicscales;
+
 /**
  *
  * @author angervuorisa
@@ -40,297 +41,54 @@ public class OctatonicIntervals {
         switch (intervalCount) {
 
             case "3": //Kolme intevallia syötetty
-                scaleCounter = -1;
-                for (int counterOut = 0; counterOut <= 4; counterOut++) {
-                    switch (counterOut) {
-                        case 1:
-                            octatonicIntervals[3] = String.valueOf('W');
 
-                            for (int counterIn = 0; counterIn <= 4; counterIn++) {
-                                switch (counterIn) {
-                                    case 1:
-                                        octatonicIntervals[4] = String.valueOf('W');
-
-                                        this.octatonicIntervalsAll = gen.getSixthIntervals(octatonicIntervals, scaleCounter);
-                                        scaleCounter = gen.getScaleCounter();
-
-                                        break;
-                                    case 2:
-                                        octatonicIntervals[4] = String.valueOf(H);
-
-                                        this.octatonicIntervalsAll = gen.getSixthIntervals(octatonicIntervals, scaleCounter);
-                                        scaleCounter = gen.getScaleCounter();
-
-                                        break;
-                                    case 3:
-                                        octatonicIntervals[4] = String.valueOf(m);
-
-                                        this.octatonicIntervalsAll = gen.getSixthIntervals(octatonicIntervals, scaleCounter);
-                                        scaleCounter = gen.getScaleCounter();
-                                        break;
-                                    case 4:
-                                        octatonicIntervals[4] = String.valueOf(M);
-
-                                        this.octatonicIntervalsAll = gen.getSixthIntervals(octatonicIntervals, scaleCounter);
-                                        scaleCounter = gen.getScaleCounter();
-                                        break;
-                                }
-                            }
-
-                            break;
-                        case 2:
-                            octatonicIntervals[3] = String.valueOf(H);
-
-                            for (int counterIn = 0; counterIn <= 4; counterIn++) {
-                                switch (counterIn) {
-                                    case 1:
-                                        octatonicIntervals[4] = String.valueOf('W');
-
-                                        this.octatonicIntervalsAll = gen.getSixthIntervals(octatonicIntervals, scaleCounter);
-                                        scaleCounter = gen.getScaleCounter();
-
-                                        break;
-                                    case 2:
-                                        octatonicIntervals[4] = String.valueOf(H);
-
-                                        this.octatonicIntervalsAll = gen.getSixthIntervals(octatonicIntervals, scaleCounter);
-                                        scaleCounter = gen.getScaleCounter();
-
-                                        break;
-                                    case 3:
-                                        octatonicIntervals[4] = String.valueOf(m);
-
-                                        this.octatonicIntervalsAll = gen.getSixthIntervals(octatonicIntervals, scaleCounter);
-                                        scaleCounter = gen.getScaleCounter();
-                                        break;
-                                    case 4:
-                                        octatonicIntervals[4] = String.valueOf(M);
-
-                                        this.octatonicIntervalsAll = gen.getSixthIntervals(octatonicIntervals, scaleCounter);
-                                        scaleCounter = gen.getScaleCounter();
-                                        break;
-                                }
-                            }
-
-                            break;
-                        case 3:
-                            octatonicIntervals[3] = String.valueOf(m);
-
-                            for (int counterIn = 0; counterIn <= 4; counterIn++) {
-                                switch (counterIn) {
-                                    case 1:
-                                        octatonicIntervals[4] = String.valueOf('W');
-
-                                        this.octatonicIntervalsAll = gen.getSixthIntervals(octatonicIntervals, scaleCounter);
-                                        scaleCounter = gen.getScaleCounter();
-
-                                        break;
-                                    case 2:
-                                        octatonicIntervals[4] = String.valueOf(H);
-
-                                        this.octatonicIntervalsAll = gen.getSixthIntervals(octatonicIntervals, scaleCounter);
-                                        scaleCounter = gen.getScaleCounter();
-
-                                        break;
-                                    case 3:
-                                        octatonicIntervals[4] = String.valueOf(m);
-
-                                        this.octatonicIntervalsAll = gen.getSixthIntervals(octatonicIntervals, scaleCounter);
-                                        scaleCounter = gen.getScaleCounter();
-                                        break;
-                                    case 4:
-                                        octatonicIntervals[4] = String.valueOf(M);
-
-                                        this.octatonicIntervalsAll = gen.getSixthIntervals(octatonicIntervals, scaleCounter);
-                                        scaleCounter = gen.getScaleCounter();
-                                        break;
-                                }
-                            }
-                            break;
-                        case 4:
-                            octatonicIntervals[3] = String.valueOf(M);
-
-                            for (int counterIn = 0; counterIn <= 4; counterIn++) {
-                                switch (counterIn) {
-                                    case 1:
-                                        octatonicIntervals[4] = String.valueOf('W');
-
-                                        this.octatonicIntervalsAll = gen.getSixthIntervals(octatonicIntervals, scaleCounter);
-                                        scaleCounter = gen.getScaleCounter();
-
-                                        break;
-                                    case 2:
-                                        octatonicIntervals[4] = String.valueOf(H);
-
-                                        this.octatonicIntervalsAll = gen.getSixthIntervals(octatonicIntervals, scaleCounter);
-                                        scaleCounter = gen.getScaleCounter();
-
-                                        break;
-                                    case 3:
-                                        octatonicIntervals[4] = String.valueOf(m);
-
-                                        this.octatonicIntervalsAll = gen.getSixthIntervals(octatonicIntervals, scaleCounter);
-                                        scaleCounter = gen.getScaleCounter();
-                                        break;
-                                    case 4:
-                                        octatonicIntervals[4] = String.valueOf(M);
-
-                                        this.octatonicIntervalsAll = gen.getSixthIntervals(octatonicIntervals, scaleCounter);
-                                        scaleCounter = gen.getScaleCounter();
-                                        break;
-                                }
-                            }
-                            break;
-                    }
+                if (octatonicIntervals[2] == String.valueOf(W)) {
+                    octatonicIntervals[3] = String.valueOf('H');
+                    octatonicIntervals[4] = String.valueOf('W');
+                    octatonicIntervals[5] = String.valueOf('H');
+                    octatonicIntervals[6] = String.valueOf('W');
+                    octatonicIntervals[7] = String.valueOf('H');
+                } else if (octatonicIntervals[2] == String.valueOf(H)) {
+                    octatonicIntervals[3] = String.valueOf('W');
+                    octatonicIntervals[4] = String.valueOf('H');
+                    octatonicIntervals[5] = String.valueOf('W');
+                    octatonicIntervals[6] = String.valueOf('H');
+                    octatonicIntervals[7] = String.valueOf('W');
                 }
-                break;
+                this.octatonicIntervalsAll[0] = String.join("", octatonicIntervals);
 
+                break;
             case "4": //Neljä intervallia syötetty
 
-                scaleCounter = -1;
-                for (int counterOut = 0; counterOut <= 4; counterOut++) {
-                    switch (counterOut) {
-                        case 1:
-                            octatonicIntervals[4] = String.valueOf('W');
+                if (octatonicIntervals[3] == String.valueOf(W)) {
 
-                            for (int counterIn = 0; counterIn <= 4; counterIn++) {
-                                switch (counterIn) {
-                                    case 1:
-                                        octatonicIntervals[5] = String.valueOf('W');
+                    octatonicIntervals[4] = String.valueOf('H');
+                    octatonicIntervals[5] = String.valueOf('W');
+                    octatonicIntervals[6] = String.valueOf('H');
+                    octatonicIntervals[7] = String.valueOf('W');
+                } else if (octatonicIntervals[3] == String.valueOf(H)) {
 
-                                        this.octatonicIntervalsAll = gen.getSixthIntervals(octatonicIntervals, scaleCounter);
-                                        scaleCounter = gen.getScaleCounter();
-
-                                        break;
-                                    case 2:
-                                        octatonicIntervals[5] = String.valueOf(H);
-
-                                        this.octatonicIntervalsAll = gen.getSixthIntervals(octatonicIntervals, scaleCounter);
-                                        scaleCounter = gen.getScaleCounter();
-
-                                        break;
-                                    case 3:
-                                        octatonicIntervals[5] = String.valueOf(m);
-
-                                        this.octatonicIntervalsAll = gen.getSixthIntervals(octatonicIntervals, scaleCounter);
-                                        scaleCounter = gen.getScaleCounter();
-                                        break;
-                                    case 4:
-                                        octatonicIntervals[5] = String.valueOf(M);
-
-                                        this.octatonicIntervalsAll = gen.getSixthIntervals(octatonicIntervals, scaleCounter);
-                                        scaleCounter = gen.getScaleCounter();
-                                        break;
-                                }
-                            }
-
-                            break;
-                        case 2:
-                            octatonicIntervals[4] = String.valueOf(H);
-
-                            for (int counterIn = 0; counterIn <= 4; counterIn++) {
-                                switch (counterIn) {
-                                    case 1:
-                                        octatonicIntervals[5] = String.valueOf('W');
-
-                                        this.octatonicIntervalsAll = gen.getSixthIntervals(octatonicIntervals, scaleCounter);
-                                        scaleCounter = gen.getScaleCounter();
-
-                                        break;
-                                    case 2:
-                                        octatonicIntervals[5] = String.valueOf(H);
-
-                                        this.octatonicIntervalsAll = gen.getSixthIntervals(octatonicIntervals, scaleCounter);
-                                        scaleCounter = gen.getScaleCounter();
-
-                                        break;
-                                    case 3:
-                                        octatonicIntervals[5] = String.valueOf(m);
-
-                                        this.octatonicIntervalsAll = gen.getSixthIntervals(octatonicIntervals, scaleCounter);
-                                        scaleCounter = gen.getScaleCounter();
-                                        break;
-                                    case 4:
-                                        octatonicIntervals[5] = String.valueOf(M);
-
-                                        this.octatonicIntervalsAll = gen.getSixthIntervals(octatonicIntervals, scaleCounter);
-                                        scaleCounter = gen.getScaleCounter();
-                                        break;
-                                }
-                            }
-
-                            break;
-                        case 3:
-                            octatonicIntervals[4] = String.valueOf(m);
-
-                            for (int counterIn = 0; counterIn <= 4; counterIn++) {
-                                switch (counterIn) {
-                                    case 1:
-                                        octatonicIntervals[5] = String.valueOf('W');
-
-                                        this.octatonicIntervalsAll = gen.getSixthIntervals(octatonicIntervals, scaleCounter);
-                                        scaleCounter = gen.getScaleCounter();
-
-                                        break;
-                                    case 2:
-                                        octatonicIntervals[5] = String.valueOf(H);
-
-                                        this.octatonicIntervalsAll = gen.getSixthIntervals(octatonicIntervals, scaleCounter);
-                                        scaleCounter = gen.getScaleCounter();
-
-                                        break;
-                                    case 3:
-                                        octatonicIntervals[5] = String.valueOf(m);
-
-                                        this.octatonicIntervalsAll = gen.getSixthIntervals(octatonicIntervals, scaleCounter);
-                                        scaleCounter = gen.getScaleCounter();
-                                        break;
-                                    case 4:
-                                        octatonicIntervals[5] = String.valueOf(M);
-
-                                        this.octatonicIntervalsAll = gen.getSixthIntervals(octatonicIntervals, scaleCounter);
-                                        scaleCounter = gen.getScaleCounter();
-                                        break;
-                                }
-                            }
-                            break;
-                        case 4:
-                            octatonicIntervals[4] = String.valueOf(M);
-
-                            for (int counterIn = 0; counterIn <= 4; counterIn++) {
-                                switch (counterIn) {
-                                    case 1:
-                                        octatonicIntervals[5] = String.valueOf('W');
-
-                                        this.octatonicIntervalsAll = gen.getSixthIntervals(octatonicIntervals, scaleCounter);
-                                        scaleCounter = gen.getScaleCounter();
-
-                                        break;
-                                    case 2:
-                                        octatonicIntervals[5] = String.valueOf(H);
-
-                                        this.octatonicIntervalsAll = gen.getSixthIntervals(octatonicIntervals, scaleCounter);
-                                        scaleCounter = gen.getScaleCounter();
-
-                                        break;
-                                    case 3:
-                                        octatonicIntervals[5] = String.valueOf(m);
-
-                                        this.octatonicIntervalsAll = gen.getSixthIntervals(octatonicIntervals, scaleCounter);
-                                        scaleCounter = gen.getScaleCounter();
-                                        break;
-                                    case 4:
-                                        octatonicIntervals[5] = String.valueOf(M);
-
-                                        this.octatonicIntervalsAll = gen.getSixthIntervals(octatonicIntervals, scaleCounter);
-                                        scaleCounter = gen.getScaleCounter();
-                                        break;
-                                }
-                            }
-                            break;
-                    }
+                    octatonicIntervals[4] = String.valueOf('W');
+                    octatonicIntervals[5] = String.valueOf('H');
+                    octatonicIntervals[6] = String.valueOf('W');
+                    octatonicIntervals[7] = String.valueOf('H');
                 }
-                break;
+                this.octatonicIntervalsAll[0] = String.join("", octatonicIntervals);
+
+            case "5": //Viisi intervallia syötetty
+                if (octatonicIntervals[4] == String.valueOf(W)) {
+
+                    octatonicIntervals[5] = String.valueOf('H');
+                    octatonicIntervals[6] = String.valueOf('W');
+                    octatonicIntervals[7] = String.valueOf('H');
+
+                } else if (octatonicIntervals[4] == String.valueOf(H)) {
+
+                    octatonicIntervals[5] = String.valueOf('W');
+                    octatonicIntervals[6] = String.valueOf('H');
+                    octatonicIntervals[7] = String.valueOf('W');
+                }
+                this.octatonicIntervalsAll[0] = String.join("", octatonicIntervals);
 
             case "6": //Kuusi intervallia syötetty (OK)
                 scaleCounter = -1;

@@ -124,7 +124,7 @@ public class MainActivity {
 
             case "4": //Octatoninen asteikko
 
-                System.out.println("Syötä intervallit W, H, m, tai M (max seitsemän intervallia)");
+                System.out.println("Syötä intervallit W, H, m, tai M (max kahdeksan intervallia)");
                 intervallit = input.nextLine();
 
                 if (intervallit.length() >= 3 && intervallit.length() <= 8) {
@@ -144,12 +144,12 @@ public class MainActivity {
                 String[] octatonicIntervalsAll = octatonic.getAllOctatonicIntervals(Integer.toString(intervallit.length()));
 
                 //System.out.println(Arrays.toString(hexatonic.getAllHexatonicIntervals(intervallit)));
-                //System.out.println(Arrays.toString(pentatonicIntervalsAll));
-                String[] myIntervalsCleanedOcta = intervalCheck.getMyTrueScales(octatonicIntervalsAll);
+                System.out.println(Arrays.toString(octatonicIntervalsAll));
+                /*String[] myIntervalsCleanedOcta = intervalCheck.getMyTrueScales(octatonicIntervalsAll);
 
                 for (String t : myIntervalsCleanedOcta) {
                     System.out.println(t + " = " + scales.getScales(t));
-                }
+                }*/
                 break;
 
         }
