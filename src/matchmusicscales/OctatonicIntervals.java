@@ -42,18 +42,18 @@ public class OctatonicIntervals {
 
             case "3": //Kolme intevallia syötetty
 
-                if (octatonicIntervals[2] == String.valueOf(W)) {
-                    octatonicIntervals[3] = String.valueOf('H');
-                    octatonicIntervals[4] = String.valueOf('W');
-                    octatonicIntervals[5] = String.valueOf('H');
-                    octatonicIntervals[6] = String.valueOf('W');
-                    octatonicIntervals[7] = String.valueOf('H');
-                } else if (octatonicIntervals[2] == String.valueOf(H)) {
-                    octatonicIntervals[3] = String.valueOf('W');
-                    octatonicIntervals[4] = String.valueOf('H');
-                    octatonicIntervals[5] = String.valueOf('W');
-                    octatonicIntervals[6] = String.valueOf('H');
-                    octatonicIntervals[7] = String.valueOf('W');
+                if (octatonicIntervals[2].equals(W)) {
+                    octatonicIntervals[3] = String.valueOf(H);
+                    octatonicIntervals[4] = String.valueOf(W);
+                    octatonicIntervals[5] = String.valueOf(H);
+                    octatonicIntervals[6] = String.valueOf(W);
+                    octatonicIntervals[7] = String.valueOf(H);
+                } else if (octatonicIntervals[2].equals(H)) {
+                    octatonicIntervals[3] = String.valueOf(W);
+                    octatonicIntervals[4] = String.valueOf(H);
+                    octatonicIntervals[5] = String.valueOf(W);
+                    octatonicIntervals[6] = String.valueOf(H);
+                    octatonicIntervals[7] = String.valueOf(W);
                 }
                 this.octatonicIntervalsAll[0] = String.join("", octatonicIntervals);
 
@@ -75,6 +75,7 @@ public class OctatonicIntervals {
                 }
                 this.octatonicIntervalsAll[0] = String.join("", octatonicIntervals);
 
+                break;
             case "5": //Viisi intervallia syötetty
                 if (octatonicIntervals[4] == String.valueOf(W)) {
 
@@ -89,6 +90,7 @@ public class OctatonicIntervals {
                     octatonicIntervals[7] = String.valueOf('W');
                 }
                 this.octatonicIntervalsAll[0] = String.join("", octatonicIntervals);
+                break;
 
             case "6": //Kuusi intervallia syötetty (OK)
                 scaleCounter = -1;
