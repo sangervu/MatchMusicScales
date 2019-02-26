@@ -4,18 +4,15 @@ package matchmusicscales;
  *
  * @author angervuorisa
  */
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.LinkedHashSet;
-import java.util.List;
 import java.util.Collections;
 
 public class OctatonicIntervals {
 
     public static LinkedHashSet<String> hashList;
     private String[] octatonicIntervals = new String[8];
-    public String[] octatonicIntervalsAll = new String[384];
-    public String[] myIntervalsCleaned = new String[54612];
+    public String[] octatonicIntervalsAll = new String[80];
 
     char H = 'H'; //Half Step
     char W = 'W'; // Whole Step
@@ -35,7 +32,6 @@ public class OctatonicIntervals {
 
     public String[] getAllOctatonicIntervals(String intervalCount) {
 
-        int scaleCounter;
         IntervalGenerator gen = new IntervalGenerator();
 
         switch (intervalCount) {
