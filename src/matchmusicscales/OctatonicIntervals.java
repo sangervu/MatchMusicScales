@@ -40,101 +40,114 @@ public class OctatonicIntervals {
 
         switch (intervalCount) {
 
-            case "3": //Kolme intevallia syötetty
+            case "3": //Kolme intevallia syötetty (OK)
 
-                if (octatonicIntervals[2].equals(W)) {
-                    octatonicIntervals[3] = String.valueOf(H);
-                    octatonicIntervals[4] = String.valueOf(W);
-                    octatonicIntervals[5] = String.valueOf(H);
-                    octatonicIntervals[6] = String.valueOf(W);
-                    octatonicIntervals[7] = String.valueOf(H);
-                } else if (octatonicIntervals[2].equals(H)) {
-                    octatonicIntervals[3] = String.valueOf(W);
-                    octatonicIntervals[4] = String.valueOf(H);
-                    octatonicIntervals[5] = String.valueOf(W);
-                    octatonicIntervals[6] = String.valueOf(H);
-                    octatonicIntervals[7] = String.valueOf(W);
+                switch (octatonicIntervals[2]) {
+
+                    case "W":
+                        octatonicIntervals[3] = String.valueOf(H);
+                        octatonicIntervals[4] = String.valueOf(W);
+                        octatonicIntervals[5] = String.valueOf(H);
+                        octatonicIntervals[6] = String.valueOf(W);
+                        octatonicIntervals[7] = String.valueOf(H);
+                        break;
+                    case "H":
+                        octatonicIntervals[3] = String.valueOf(W);
+                        octatonicIntervals[4] = String.valueOf(H);
+                        octatonicIntervals[5] = String.valueOf(W);
+                        octatonicIntervals[6] = String.valueOf(H);
+                        octatonicIntervals[7] = String.valueOf(W);
+                        break;
                 }
-                this.octatonicIntervalsAll[0] = String.join("", octatonicIntervals);
+
+                for (int i = 0; i <= 1; i++) {
+                    //"rotate" the intervals Array
+                    Collections.rotate(Arrays.asList(octatonicIntervals), 1);
+                    octatonicIntervalsAll[i] = String.join("", octatonicIntervals);
+                }
+                break;
+
+            case "4": //Neljä intervallia syötetty (OK)
+
+                switch (octatonicIntervals[3]) {
+
+                    case "H":
+                        octatonicIntervals[4] = String.valueOf(W);
+                        octatonicIntervals[5] = String.valueOf(H);
+                        octatonicIntervals[6] = String.valueOf(W);
+                        octatonicIntervals[7] = String.valueOf(H);
+                        break;
+                    case "W":
+                        octatonicIntervals[4] = String.valueOf(H);
+                        octatonicIntervals[5] = String.valueOf(W);
+                        octatonicIntervals[6] = String.valueOf(H);
+                        octatonicIntervals[7] = String.valueOf(W);
+                        break;
+                }
+                for (int i = 0; i <= 1; i++) {
+                    //"rotate" the intervals Array
+                    Collections.rotate(Arrays.asList(octatonicIntervals), 1);
+                    octatonicIntervalsAll[i] = String.join("", octatonicIntervals);
+                }
 
                 break;
-            case "4": //Neljä intervallia syötetty
+            case "5": //Viisi intervallia syötetty (OK)
+                switch (octatonicIntervals[4]) {
 
-                if (octatonicIntervals[3] == String.valueOf(W)) {
-
-                    octatonicIntervals[4] = String.valueOf('H');
-                    octatonicIntervals[5] = String.valueOf('W');
-                    octatonicIntervals[6] = String.valueOf('H');
-                    octatonicIntervals[7] = String.valueOf('W');
-                } else if (octatonicIntervals[3] == String.valueOf(H)) {
-
-                    octatonicIntervals[4] = String.valueOf('W');
-                    octatonicIntervals[5] = String.valueOf('H');
-                    octatonicIntervals[6] = String.valueOf('W');
-                    octatonicIntervals[7] = String.valueOf('H');
+                    case "W":
+                        octatonicIntervals[5] = String.valueOf(H);
+                        octatonicIntervals[6] = String.valueOf(W);
+                        octatonicIntervals[7] = String.valueOf(H);
+                        break;
+                    case "H":
+                        octatonicIntervals[5] = String.valueOf(W);
+                        octatonicIntervals[6] = String.valueOf(H);
+                        octatonicIntervals[7] = String.valueOf(W);
+                        break;
                 }
-                this.octatonicIntervalsAll[0] = String.join("", octatonicIntervals);
-
-                break;
-            case "5": //Viisi intervallia syötetty
-                if (octatonicIntervals[4] == String.valueOf(W)) {
-
-                    octatonicIntervals[5] = String.valueOf('H');
-                    octatonicIntervals[6] = String.valueOf('W');
-                    octatonicIntervals[7] = String.valueOf('H');
-
-                } else if (octatonicIntervals[4] == String.valueOf(H)) {
-
-                    octatonicIntervals[5] = String.valueOf('W');
-                    octatonicIntervals[6] = String.valueOf('H');
-                    octatonicIntervals[7] = String.valueOf('W');
+                for (int i = 0; i <= 1; i++) {
+                    //"rotate" the intervals Array
+                    Collections.rotate(Arrays.asList(octatonicIntervals), 1);
+                    octatonicIntervalsAll[i] = String.join("", octatonicIntervals);
                 }
-                this.octatonicIntervalsAll[0] = String.join("", octatonicIntervals);
                 break;
 
             case "6": //Kuusi intervallia syötetty (OK)
-                scaleCounter = -1;
-                for (int counterOut = 0; counterOut <= 4; counterOut++) {
-                    switch (counterOut) {
-                        case 1:
-                            octatonicIntervals[6] = String.valueOf('W');
-
-                            this.octatonicIntervalsAll = gen.getEigthIntervals(octatonicIntervals, scaleCounter);
-                            scaleCounter = gen.getScaleCounter();
-
-                            break;
-                        case 2:
-                            octatonicIntervals[6] = String.valueOf(H);
-
-                            this.octatonicIntervalsAll = gen.getEigthIntervals(octatonicIntervals, scaleCounter);
-                            scaleCounter = gen.getScaleCounter();
-
-                            break;
-                        case 3:
-                            octatonicIntervals[6] = String.valueOf(m);
-
-                            this.octatonicIntervalsAll = gen.getEigthIntervals(octatonicIntervals, scaleCounter);
-                            scaleCounter = gen.getScaleCounter();
-                            break;
-                        case 4:
-                            octatonicIntervals[6] = String.valueOf(M);
-
-                            this.octatonicIntervalsAll = gen.getEigthIntervals(octatonicIntervals, scaleCounter);
-                            scaleCounter = gen.getScaleCounter();
-                            break;
-                    }
+                switch (octatonicIntervals[5]) {
+                    case "H":
+                        octatonicIntervals[6] = String.valueOf(W);
+                        octatonicIntervals[7] = String.valueOf(H);
+                        break;
+                    case "W":
+                        octatonicIntervals[6] = String.valueOf(H);
+                        octatonicIntervals[7] = String.valueOf(W);
+                        break;
+                }
+                for (int i = 0; i <= 1; i++) {
+                    //"rotate" the intervals Array
+                    Collections.rotate(Arrays.asList(octatonicIntervals), 1);
+                    octatonicIntervalsAll[i] = String.join("", octatonicIntervals);
                 }
                 break;
 
             case "7": //Seitsemän intervallia syötetty (OK)
-                scaleCounter = -1;
-                this.octatonicIntervalsAll = gen.getEigthIntervals(octatonicIntervals, scaleCounter);
-                scaleCounter = gen.getScaleCounter();
+                switch (octatonicIntervals[6]) {
+                    case "W":
+                        octatonicIntervals[7] = String.valueOf(H);
+                        break;
+                    case "H":
+                        octatonicIntervals[7] = String.valueOf(W);
+                        break;
+                }
+                for (int i = 0; i <= 1; i++) {
+                    //"rotate" the intervals Array
+                    Collections.rotate(Arrays.asList(octatonicIntervals), 1);
+                    octatonicIntervalsAll[i] = String.join("", octatonicIntervals);
+                }
                 break;
 
             case "8": //Kahdeksan intervallia syötetty (OK)
-                scaleCounter = -1;
-                for (int i = 0; i <= 7; i++) {
+                for (int i = 0; i <= 1; i++) {
                     //"rotate" the intervals Array
                     Collections.rotate(Arrays.asList(octatonicIntervals), 1);
                     octatonicIntervalsAll[i] = String.join("", octatonicIntervals);

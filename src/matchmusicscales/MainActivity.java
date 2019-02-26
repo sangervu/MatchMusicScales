@@ -143,13 +143,13 @@ public class MainActivity {
 
                 String[] octatonicIntervalsAll = octatonic.getAllOctatonicIntervals(Integer.toString(intervallit.length()));
 
-                System.out.println(Arrays.toString(octatonic.getAllOctatonicIntervals(intervallit)));
+                //System.out.println(Arrays.toString(octatonic.getAllOctatonicIntervals(intervallit)));
                 //System.out.println(Arrays.toString(octatonicIntervalsAll));
-                /*String[] myIntervalsCleanedOcta = intervalCheck.getMyTrueScales(octatonicIntervalsAll);
+                String[] myIntervalsCleanedOcta = intervalCheck.getMyTrueScales(octatonicIntervalsAll);
 
                 for (String t : myIntervalsCleanedOcta) {
                     System.out.println(t + " = " + scales.getScales(t));
-                }*/
+                }
                 break;
 
         }

@@ -23,6 +23,9 @@ public class MusicScales {
         points.put("WWWmHW", "Prometheus scale");
         points.put("HmWHmW", "Tritone scale");
         points.put("mHmHmH", "Augmented scale");
+        
+        // Chromatic scale
+        points.put("HHHHHHHH", "Chromatic scale");
 
         //Enigmatic heptatonic scale (Giuseppe Verdi/enigmatic, mysterious, puzzling, ambiguous, unclear)
         points.put("HmWWWHH", "Enigmatic scale");
@@ -90,7 +93,6 @@ public class MusicScales {
         //octatonic scales
         points.put("WHWHWHWH", "Octatonic scale");
         points.put("HWHWHWHW", "Diminished scale");
-        points.put("HHHHHHHH", "Chromatic scale");
        
         return points.get(asteikko);
 
