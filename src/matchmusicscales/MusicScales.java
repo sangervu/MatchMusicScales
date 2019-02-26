@@ -93,6 +93,8 @@ public class MusicScales {
         //octatonic scales
         points.put("WHWHWHWH", "Octatonic scale");
         points.put("HWHWHWHW", "Diminished scale");
+        
+        // Uusia skaaloja
        
         return points.get(asteikko);
 
