@@ -164,56 +164,6 @@ public class IntervalGenerator {
         return newIntervals;
 
     }
-    
-        public String[] getEigthIntervals(String[] intervals, int scaleCounter) {
-
-        for (int counterIn = 0; counterIn <= 4; counterIn++) {
-            switch (counterIn) {
-                case 1:
-                    intervals[7] = String.valueOf('W');
-                    for (int k = 0; k <= 7; k++) {
-                        scaleCounter = scaleCounter + 1;
-                        //"rotate" the pentatoninIntervals Array
-                        Collections.rotate(Arrays.asList(intervals), 1);
-                        newIntervals[scaleCounter] = String.join("", intervals);
-                    }
-                    break;
-                case 2:
-                    intervals[7] = String.valueOf(H);
-
-                    for (int k = 0; k <= 7; k++) {
-                        scaleCounter = scaleCounter + 1;
-                        //"rotate" the pentatoninIntervals Array
-                        Collections.rotate(Arrays.asList(intervals), 1);
-                        newIntervals[scaleCounter] = String.join("", intervals);
-                    }
-                    break;
-                case 3:
-                    intervals[7] = String.valueOf(m);
-                    for (int k = 0; k <= 7; k++) {
-                        scaleCounter = scaleCounter + 1;
-                        //"rotate" the pentatoninIntervals Array
-                        Collections.rotate(Arrays.asList(intervals), 1);
-                        newIntervals[scaleCounter] = String.join("", intervals);
-                    }
-                    break;
-                case 4:
-                    intervals[7] = String.valueOf(M);
-
-                    for (int k = 0; k <= 7; k++) {
-                        scaleCounter = scaleCounter + 1;
-                        //"rotate" the pentatoninIntervals Array
-                        Collections.rotate(Arrays.asList(intervals), 1);
-                        newIntervals[scaleCounter] = String.join("", intervals);
-                    }
-                    break;
-            }
-        }
-        this.scaleCounter = scaleCounter;
-
-        return newIntervals;
-
-    }
 
     public int getScaleCounter() {
 

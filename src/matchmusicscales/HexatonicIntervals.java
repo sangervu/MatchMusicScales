@@ -51,7 +51,7 @@ public class HexatonicIntervals {
                             for (int counterIn = 0; counterIn <= 4; counterIn++) {
                                 switch (counterIn) {
                                     case 1:
-                                        hexatonicIntervals[4] = String.valueOf('W');
+                                        hexatonicIntervals[4] = String.valueOf(W);
 
                                         this.hexatonicIntervalsAll = gen.getSixthIntervals(hexatonicIntervals, scaleCounter);
                                         scaleCounter = gen.getScaleCounter();
