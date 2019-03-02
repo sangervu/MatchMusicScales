@@ -8,32 +8,29 @@ import java.util.List;
 public class CheckIntervals {
 
     String[] myIntervalsCleaned = new String[79]; //Taulukon koko pitää olla riittävän suuri
-    LinkedHashSet<String> hashList;
+    //LinkedHashSet<String> hashList;
 
     MusicScales scales = new MusicScales();
 
-    int laskuri = -1;
-
-   public String[] getMyTrueScales(String[] intervals) {
+    //int laskuri = -1;
+    public String[] getMyTrueScales(String[] intervals) {
 
         MusicScales scales = new MusicScales();
 
         int laskuri = -1;
 
         //puhdistetun taulukon koko, jossa kaikki ovat potentiaalisia skaaloja
-        //tarkistetaan kaikki potentiuaaliset skaalat
-        for (int n = 0; n <= 79; n++) {//luupin pituss saa olla max taulukon koko
-
-            String scale = scales.getScales(intervals[n]);
+        //luupin pituus saa olla max taulukon koko
+        for (String t : intervals) {
+            String scale = scales.getScales(t);
 
             if (scale != null) {
                 laskuri = laskuri + 1;
-                myIntervalsCleaned[laskuri] = intervals[n];
+                myIntervalsCleaned[laskuri] = t;
             }
         }
-       myIntervalsCleaned = Arrays.copyOf(myIntervalsCleaned, laskuri + 1);
-       
-       return myIntervalsCleaned;
+        myIntervalsCleaned = Arrays.copyOf(myIntervalsCleaned, laskuri + 1);
+        return myIntervalsCleaned;
     }
 
     /*public void cleanInterval() {

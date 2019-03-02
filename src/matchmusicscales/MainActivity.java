@@ -81,19 +81,17 @@ public class MainActivity {
                     System.out.println("Intervalleja ei saa olla alle kolme, tai yli kuusi");
                 }
 
-                String[] hexatonicIntervalsAll = hexatonic.getAllHexatonicIntervals(Integer.toString(intervallit.length()));
-
-                //System.out.println(Arrays.toString(hexatonic.getAllHexatonicIntervals(intervallit)));
-            
+                String[] hexatonicIntervalsAll = hexatonic.getAllHexatonicIntervals(Integer.toString(intervallit.length()));        
                 String[] myIntervalsCleanedHexa = intervalCheck.getMyTrueScales(hexatonicIntervalsAll);
                 
+                //System.out.println(Arrays.toString(hexatonic.getAllHexatonicIntervals(intervallit)));
                 //System.out.println(Arrays.toString(hexatonicIntervalsAll));
-                System.out.println(Arrays.toString(myIntervalsCleanedHexa));
+                //System.out.println(Arrays.toString(myIntervalsCleanedHexa));
                 
 
-                /*for (String t : myIntervalsCleanedHexa) {
+                for (String t : myIntervalsCleanedHexa) {
                     System.out.println(t + " = " + scales.getScales(t));
-                }*/
+                }
                 break;
 
             case "3": //Heptatoninen asteikko
