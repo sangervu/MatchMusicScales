@@ -115,11 +115,11 @@ public class MainActivity {
 
                 String[] heptatonicIntervalsAll = heptatonic.getAllHeptatonicIntervals(Integer.toString(intervallit.length()));
 
-                //System.out.println(Arrays.toString(hexatonic.getAllHexatonicIntervals(intervallit)));
+                //System.out.println(Arrays.toString(heptatonic.getAllHeptatonicIntervals(intervallit)));
                 //System.out.println(Arrays.toString(pentatonicIntervalsAll));
                 String[] myIntervalsCleanedHepta = intervalCheck.getMyTrueScales(heptatonicIntervalsAll);
 
-                for (String t : myIntervalsCleanedHepta) {
+               for (String t : myIntervalsCleanedHepta) {
                     System.out.println(t + " = " + scales.getScales(t));
                 }
                 break;

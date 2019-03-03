@@ -12,7 +12,7 @@ public class IntervalGenerator {
     char W = 'W'; // Whole Step
     char m = 'm'; // minor 3rd
     char M = 'M'; // Major 3rd
-    String[] newIntervals = new String[384];
+    String[] newIntervals = new String[1800];
     int scaleCounter;
 
     public String[] getFifthIntervals(String[] intervals, int scaleCounter) {

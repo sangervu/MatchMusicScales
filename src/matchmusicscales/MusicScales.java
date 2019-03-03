@@ -25,7 +25,7 @@ public class MusicScales {
         points.put("mHmHmH", "Augmented scale");
         
         // Chromatic scale
-        points.put("HHHHHHHH", "Chromatic scale");
+        points.put("HHHHHHH", "Chromatic scale");
 
         //Enigmatic heptatonic scale (Giuseppe Verdi/enigmatic, mysterious, puzzling, ambiguous, unclear)
         points.put("HmWWWHH", "Enigmatic scale");
@@ -55,7 +55,6 @@ public class MusicScales {
         points.put("HWWHWWW", "Locrian mode");
         
         //melodic minor mode (heptatonic)   
-        points.put("WHWWWWH", "Melodic minor scale(ascending)");
         points.put("WHWWWWH","mi Ma7 Melodic minor scale (mm)" );
         points.put("HWWWWHW","mi7 Dorian b2 mm scale" );
         points.put("WWWWHWH","Ma7#5 Lydian augmented mm scale" );

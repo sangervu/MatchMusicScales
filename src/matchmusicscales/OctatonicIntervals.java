@@ -32,8 +32,6 @@ public class OctatonicIntervals {
 
     public String[] getAllOctatonicIntervals(String intervalCount) {
 
-        IntervalGenerator gen = new IntervalGenerator();
-
         switch (intervalCount) {
 
             case "3": //Kolme intevallia syötetty (OK)
