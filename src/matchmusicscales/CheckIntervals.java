@@ -8,7 +8,7 @@ import java.util.List;
 public class CheckIntervals {
 
     String[] myIntervalsCleaned = new String[79]; //Taulukon koko pitää olla riittävän suuri
-    //LinkedHashSet<String> hashList;
+    LinkedHashSet<String> hashList;
 
     MusicScales scales = new MusicScales();
 
@@ -33,10 +33,9 @@ public class CheckIntervals {
         return myIntervalsCleaned;
     }
 
-    /*public void cleanInterval() {
+    public String[] getCleanInterval(String[] intervals) {
         //* Creating ArrayList of Array
-
-        List<String> myIntervalsList = new ArrayList<String>(Arrays.asList(myIntervalsCleaned));
+        List<String> myIntervalsList = new ArrayList<String>(Arrays.asList(intervals));
         hashList = new LinkedHashSet<String>();
 
         //Adding ArrayList elements to the LinkedHashSet
@@ -50,6 +49,7 @@ public class CheckIntervals {
         // Adding LinkedHashSet elements to the ArrayList
         //this.myIntervalsList.addAll(hashList);
         String[] myIntevalsCleanedAll = new String[hashList.size()];
-        this.myIntervalsCleaned = hashList.toArray(myIntevalsCleanedAll);
-    }*/
+        myIntervalsCleaned = hashList.toArray(myIntevalsCleanedAll);
+        return myIntervalsCleaned;
+    }
 }
