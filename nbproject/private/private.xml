@@ -3,8 +3,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/C:/GIT_HUB/MatchMusicScales/src/matchmusicscales/PentatonicIntervals.java</file>
             <file>file:/C:/GIT_HUB/MatchMusicScales/src/matchmusicscales/MainActivity.java</file>
+            <file>file:/C:/GIT_HUB/MatchMusicScales/src/matchmusicscales/CheckIntervals.java</file>
             <file>file:/C:/GIT_HUB/MatchMusicScales/src/matchmusicscales/IntervalGenerator.java</file>
+            <file>file:/C:/GIT_HUB/MatchMusicScales/src/matchmusicscales/MusicScales.java</file>
+            <file>file:/C:/GIT_HUB/MatchMusicScales/src/matchmusicscales/HeptatonicIntervals.java</file>
+            <file>file:/C:/GIT_HUB/MatchMusicScales/src/matchmusicscales/HexatonicIntervals.java</file>
             <file>file:/C:/GIT_HUB/MatchMusicScales/src/matchmusicscales/OctatonicIntervals.java</file>
         </group>
     </open-files>
