@@ -114,7 +114,6 @@ public class MainActivity {
                 }
 
                 //String[] heptatonicIntervalsAll = heptatonic.getAllHeptatonicIntervals(Integer.toString(intervallit.length()));
-
                 //System.out.println(Arrays.toString(heptatonic.getAllHeptatonicIntervals(intervallit)));
                 //System.out.println(Arrays.toString(pentatonicIntervalsAll));
                 //String[] myIntervalsCleanedHepta = intervalCheck.getMyTrueScales(heptatonicIntervalsAll);
@@ -153,34 +152,42 @@ public class MainActivity {
                 }*/
                 break;
 
-            case 7: //annettu seitemän intervallia
-                
+            case 7: //annettu seitemän intervallia (OK)
+
                 for (int i = 0; i < intervallit.length(); i++) {
 
-                        if ((intervallit.charAt(i) != W) && (intervallit.charAt(i) != H) && (intervallit.charAt(i) != m) && (intervallit.charAt(i) != M)) {
-                            System.out.println("intervalleja ei tunnistettu");
-                        } else {
-                            //some code here
-                            heptatonic.setHeptatonicInterval(String.valueOf(intervallit.charAt(i)));
-                            octatonic.setOctatonicInterval(String.valueOf(intervallit.charAt(i)));
-                        }
-                    }
+                    if ((intervallit.charAt(i) != W) && (intervallit.charAt(i) != H) && (intervallit.charAt(i) != m) && (intervallit.charAt(i) != M)) {
+                        System.out.println("intervalleja ei tunnistettu");
+                    } else {
 
+                        heptatonic.setHeptatonicInterval(String.valueOf(intervallit.charAt(i)));
+                        octatonic.setOctatonicInterval(String.valueOf(intervallit.charAt(i)));
+                    }
+                }
+
+                // Heptatoniset asteikeot
                 String[] heptatonicIntervalsAll = heptatonic.getAllHeptatonicIntervals(Integer.toString(intervallit.length()));
                 String[] myIntervalsCleanedHepta = intervalCheck.getMyTrueScales(heptatonicIntervalsAll);
-                
-                System.out.println("Septatoniniset asteikot");
+                System.out.println("Heptatoniset asteikot:");
                 for (String t : myIntervalsCleanedHepta) {
                     System.out.println(t + " = " + scales.getScales(t));
                 }
-                
+                if (myIntervalsCleanedHepta.length == 0) {
+                    System.out.println("N.A.");
+                }
+                // Oktatoniset asteikot
+                CheckIntervals intervalCheck7 = new CheckIntervals();
                 String[] octatonicIntervalsAll7 = octatonic.getAllOctatonicIntervals(Integer.toString(intervallit.length()));
-                String[] myIntervalsCleanedOcta7 = intervalCheck.getMyTrueScales(octatonicIntervalsAll7);
-                
-                System.out.println("Oktatoniset asteikot");
+                String[] myIntervalsCleanedOcta7 = intervalCheck7.getMyTrueScales(octatonicIntervalsAll7);
+
+                System.out.println("Oktatoniset asteikot:");
                 for (String t : myIntervalsCleanedOcta7) {
                     System.out.println(t + " = " + scales.getScales(t));
                 }
+                if (myIntervalsCleanedOcta7.length == 0) {
+                    System.out.println("N.A.");
+                }
+
                 break;
 
             case 8: // annettu kahdeksan intervallia (OK)
@@ -198,7 +205,7 @@ public class MainActivity {
                 String[] octatonicIntervalsAll8 = octatonic.getAllOctatonicIntervals(Integer.toString(intervallit.length()));
                 String[] myIntervalsCleanedOcta8 = intervalCheck.getMyTrueScales(octatonicIntervalsAll8);
 
-                System.out.println("Oktatoniset asteikot");
+                System.out.println("Oktatoniset asteikot:");
                 for (String t : myIntervalsCleanedOcta8) {
                     System.out.println(t + " = " + scales.getScales(t));
                 }

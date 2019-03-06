@@ -56,4 +56,12 @@ public class CheckIntervals {
         myIntervalsCleaned = hashList.toArray(myIntevalsCleanedAll);
         return myIntervalsCleaned;
     }
+    
+    public void resetScales(){
+
+
+
+
+} 
+    
 }

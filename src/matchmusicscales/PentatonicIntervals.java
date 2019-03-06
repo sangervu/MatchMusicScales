@@ -36,7 +36,7 @@ public class PentatonicIntervals {
 
         switch (intervalCount) {
 
-            case "3":
+            case "3": //intervalleja kolme
 
                 for (int counterOut = 0; counterOut <= 4; counterOut++) {
                     switch (counterOut) {
@@ -70,13 +70,13 @@ public class PentatonicIntervals {
                 }
                 break;
 
-            case "4":
+            case "4": //intervalleja neljä
 
                 this.pentatonicIntervalsAll = gen.getFifthIntervals(pentatonicIntervals, scaleCounter);
                 scaleCounter = gen.getScaleCounter();
                 break;
 
-            case "5":
+            case "5": //intervalleja viisi
                 for (int i = 0; i <= 4; i++) {
                     //"rotate" the pentatoninIntervals Array
                     Collections.rotate(Arrays.asList(pentatonicIntervals), 1);
