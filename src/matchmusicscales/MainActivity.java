@@ -27,15 +27,17 @@ public class MainActivity {
 
         CheckIntervals intervalCheck = new CheckIntervals();
 
-        System.out.println("1: Etsi Pentatoninen. 2: Etsi Hextatoninen. 3: Etsi Heptatoninen. 4: Etsi Octatoninen");
-        String valinta = input.nextLine();
+        System.out.println("Syötä intervallit W, H, m, tai M (min kolme ja max viisi intervallia)");
+        intervallit = input.nextLine();
 
-        switch (valinta) {
+        if (intervallit.length() < 3 && intervallit.length() > 8) {
+            System.out.println("Intervalleja ei saa olla alle kolme, tai yli kahdeksan");
+        }
 
-            case "1": //Pentatoninen asteikko
+        int intervalliLaskuri = intervallit.length();
+        switch (intervalliLaskuri) {
 
-                System.out.println("Syötä intervallit W, H, m, tai M (max viisi intervallia)");
-                intervallit = input.nextLine();
+            case 3: // annettu kolme intervallia
 
                 if (intervallit.length() >= 3 && intervallit.length() <= 5) {
                     for (int i = 0; i < intervallit.length(); i++) {
@@ -62,7 +64,7 @@ public class MainActivity {
                 }
                 break;
 
-            case "2": //Hexatoninen asteikko
+            case 4: // annettu neljä intervallia
 
                 System.out.println("Syötä intervallit W, H, m, tai M (max kuusi intervallia)");
                 intervallit = input.nextLine();
@@ -81,20 +83,18 @@ public class MainActivity {
                     System.out.println("Intervalleja ei saa olla alle kolme, tai yli kuusi");
                 }
 
-                String[] hexatonicIntervalsAll = hexatonic.getAllHexatonicIntervals(Integer.toString(intervallit.length()));        
+                String[] hexatonicIntervalsAll = hexatonic.getAllHexatonicIntervals(Integer.toString(intervallit.length()));
                 String[] myIntervalsCleanedHexa = intervalCheck.getMyTrueScales(hexatonicIntervalsAll);
-                
+
                 //System.out.println(Arrays.toString(hexatonic.getAllHexatonicIntervals(intervallit)));
                 //System.out.println(Arrays.toString(hexatonicIntervalsAll));
                 //System.out.println(Arrays.toString(myIntervalsCleanedHexa));
-                
-
                 for (String t : myIntervalsCleanedHexa) {
                     System.out.println(t + " = " + scales.getScales(t));
                 }
                 break;
 
-            case "3": //Heptatoninen asteikko
+            case 5: //annettu viisi intervallia
 
                 System.out.println("Syötä intervallit W, H, m, tai M (max seitsemän intervallia)");
                 intervallit = input.nextLine();
@@ -119,12 +119,12 @@ public class MainActivity {
                 //System.out.println(Arrays.toString(pentatonicIntervalsAll));
                 String[] myIntervalsCleanedHepta = intervalCheck.getMyTrueScales(heptatonicIntervalsAll);
 
-               for (String t : myIntervalsCleanedHepta) {
+                for (String t : myIntervalsCleanedHepta) {
                     System.out.println(t + " = " + scales.getScales(t));
                 }
                 break;
 
-            case "4": //Octatoninen asteikko
+            case 6: //annettu kuusi intervallia
 
                 System.out.println("Syötä intervallit W, H, m, tai M (max kahdeksan intervallia)");
                 intervallit = input.nextLine();
@@ -143,12 +143,64 @@ public class MainActivity {
                     System.out.println("Intervalleja ei saa olla alle kolme, tai yli kahdeksan");
                 }
 
+                //String[] octatonicIntervalsAll = octatonic.getAllOctatonicIntervals(Integer.toString(intervallit.length()));
+                //System.out.println(Arrays.toString(octatonic.getAllOctatonicIntervals(intervallit)));
+                //System.out.println(Arrays.toString(octatonicIntervalsAll));
+                //String[] myIntervalsCleanedOcta = intervalCheck.getMyTrueScales(octatonicIntervalsAll);
+
+                /*for (String t : myIntervalsCleanedOcta) {
+                    System.out.println(t + " = " + scales.getScales(t));
+                }*/
+                break;
+
+            case 7: //annettu seitemän intervallia
+
+                System.out.println("Syötä intervallit W, H, m, tai M (max kahdeksan intervallia)");
+                intervallit = input.nextLine();
+
+                if (intervallit.length() >= 3 && intervallit.length() <= 8) {
+                    for (int i = 0; i < intervallit.length(); i++) {
+
+                        if ((intervallit.charAt(i) != W) && (intervallit.charAt(i) != H) && (intervallit.charAt(i) != m) && (intervallit.charAt(i) != M)) {
+                            System.out.println("intervalleja ei tunnistettu");
+                        } else {
+                            //some code here
+                            octatonic.setOctatonicInterval(String.valueOf(intervallit.charAt(i)));
+                        }
+                    }
+                } else {
+                    System.out.println("Intervalleja ei saa olla alle kolme, tai yli kahdeksan");
+                }
+
+                //String[] octatonicIntervalsAll = octatonic.getAllOctatonicIntervals(Integer.toString(intervallit.length()));
+                //System.out.println(Arrays.toString(octatonic.getAllOctatonicIntervals(intervallit)));
+                //System.out.println(Arrays.toString(octatonicIntervalsAll));
+                //String[] myIntervalsCleanedOcta = intervalCheck.getMyTrueScales(octatonicIntervalsAll);
+
+                /*for (String t : myIntervalsCleanedOcta) {
+                    System.out.println(t + " = " + scales.getScales(t));
+                }*/
+                break;
+
+            case 8: // annettu kahdeksan intervallia
+
+                for (int i = 0; i < intervallit.length(); i++) {
+
+                    if ((intervallit.charAt(i) != W) && (intervallit.charAt(i) != H) && (intervallit.charAt(i) != m) && (intervallit.charAt(i) != M)) {
+                        System.out.println("intervalleja ei tunnistettu");
+                    } else {
+
+                        octatonic.setOctatonicInterval(String.valueOf(intervallit.charAt(i)));
+                    }
+                }
+
                 String[] octatonicIntervalsAll = octatonic.getAllOctatonicIntervals(Integer.toString(intervallit.length()));
 
                 //System.out.println(Arrays.toString(octatonic.getAllOctatonicIntervals(intervallit)));
                 //System.out.println(Arrays.toString(octatonicIntervalsAll));
                 String[] myIntervalsCleanedOcta = intervalCheck.getMyTrueScales(octatonicIntervalsAll);
 
+                System.out.println("Oktatoniset asteikot");
                 for (String t : myIntervalsCleanedOcta) {
                     System.out.println(t + " = " + scales.getScales(t));
                 }
