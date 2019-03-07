@@ -3,11 +3,20 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+<<<<<<< HEAD
             <file>file:/C:/GIT/MatchMusicScales/src/matchmusicscales/CheckIntervals.java</file>
             <file>file:/C:/GIT/MatchMusicScales/src/matchmusicscales/IntervalGenerator.java</file>
             <file>file:/C:/GIT/MatchMusicScales/src/matchmusicscales/HeptatonicIntervals.java</file>
             <file>file:/C:/GIT/MatchMusicScales/src/matchmusicscales/MainActivity.java</file>
             <file>file:/C:/GIT/MatchMusicScales/src/matchmusicscales/MusicScales.java</file>
+=======
+            <file>file:/C:/GIT_HUB/MatchMusicScales/src/matchmusicscales/PentatonicIntervals.java</file>
+            <file>file:/C:/GIT_HUB/MatchMusicScales/src/matchmusicscales/MainActivity.java</file>
+            <file>file:/C:/GIT_HUB/MatchMusicScales/src/matchmusicscales/CheckIntervals.java</file>
+            <file>file:/C:/GIT_HUB/MatchMusicScales/src/matchmusicscales/HeptatonicIntervals.java</file>
+            <file>file:/C:/GIT_HUB/MatchMusicScales/src/matchmusicscales/MusicScales.java</file>
+            <file>file:/C:/GIT_HUB/MatchMusicScales/src/matchmusicscales/OctatonicIntervals.java</file>
+>>>>>>> f265f264290d85703a4cc21e4d770537f5466635
         </group>
     </open-files>
 </project-private>
