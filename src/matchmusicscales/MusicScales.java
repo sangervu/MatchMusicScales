@@ -2,8 +2,17 @@ package matchmusicscales;
 
 import java.util.HashMap;
 
+/**
+ *
+ * @author angervuorisa
+ */
 public class MusicScales {
 
+    /**
+     *
+     * @param asteikko
+     * @return
+     */
     public String getScales(String asteikko) {
 
         HashMap<String, String> points = new HashMap<String, String>();

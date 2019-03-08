@@ -6,11 +6,26 @@ import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Collections;
 
+/**
+ *
+ * @author angervuorisa
+ */
 public class PentatonicIntervals {
 
+    /**
+     *
+     */
     public static LinkedHashSet<String> hashList;
     private String[] pentatonicIntervals = new String[5];
+
+    /**
+     *
+     */
     public String[] pentatonicIntervalsAll = new String[80];
+
+    /**
+     *
+     */
     public String[] myIntervalsCleaned = new String[54612];
 
     char H = 'H'; //Half Step
@@ -23,6 +38,10 @@ public class PentatonicIntervals {
     static int charCounter = -1;
     static int scaleCounter = -1;
 
+    /**
+     *
+     * @param intervallit
+     */
     public void setPentatonicInterval(String intervallit) {
 
         charCounter = charCounter + 1;
@@ -30,6 +49,11 @@ public class PentatonicIntervals {
 
     }
 
+    /**
+     *
+     * @param intervalCount
+     * @return
+     */
     public String[] getAllPentatonicIntervals(String intervalCount) {
 
         IntervalGenerator gen = new IntervalGenerator();
