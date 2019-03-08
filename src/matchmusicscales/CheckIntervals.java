@@ -18,7 +18,6 @@ public class CheckIntervals {
     MusicScales scales = new MusicScales();
 
     //int laskuri = -1;
-
     /**
      *
      * @param intervals
@@ -71,13 +70,12 @@ public class CheckIntervals {
         myIntervalsCleaned = hashList.toArray(myIntevalsCleanedAll);
         return myIntervalsCleaned;
     }
-    
+
     /**
      *
      */
-    public void resetScales(){
+    public void resetScales() {
 
+    }
 
-} 
-    
 }
