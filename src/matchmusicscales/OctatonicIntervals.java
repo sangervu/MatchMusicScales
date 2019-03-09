@@ -79,6 +79,13 @@ public class OctatonicIntervals {
                     Collections.rotate(Arrays.asList(octatonicIntervals), 1);
                     octatonicIntervalsAll[i] = String.join("", octatonicIntervals);
                 }
+                Collections.rotate(Arrays.asList(octatonicIntervals), -2);
+                octatonicIntervals[3] = String.valueOf(H);
+                octatonicIntervals[4] = String.valueOf(H);
+                octatonicIntervals[5] = String.valueOf(H);
+                octatonicIntervals[6] = String.valueOf(H);
+                octatonicIntervals[7] = String.valueOf(H);
+                octatonicIntervalsAll[2] = String.join("", octatonicIntervals);
                 break;
 
             case "4": //Neljä intervallia syötetty (OK)
@@ -103,6 +110,12 @@ public class OctatonicIntervals {
                     Collections.rotate(Arrays.asList(octatonicIntervals), 1);
                     octatonicIntervalsAll[i] = String.join("", octatonicIntervals);
                 }
+                Collections.rotate(Arrays.asList(octatonicIntervals), -2);
+                octatonicIntervals[4] = String.valueOf(H);
+                octatonicIntervals[5] = String.valueOf(H);
+                octatonicIntervals[6] = String.valueOf(H);
+                octatonicIntervals[7] = String.valueOf(H);
+                octatonicIntervalsAll[2] = String.join("", octatonicIntervals);
 
                 break;
             case "5": //Viisi intervallia syötetty (OK)
@@ -124,6 +137,11 @@ public class OctatonicIntervals {
                     Collections.rotate(Arrays.asList(octatonicIntervals), 1);
                     octatonicIntervalsAll[i] = String.join("", octatonicIntervals);
                 }
+                Collections.rotate(Arrays.asList(octatonicIntervals), -2);
+                octatonicIntervals[5] = String.valueOf(H);
+                octatonicIntervals[6] = String.valueOf(H);
+                octatonicIntervals[7] = String.valueOf(H);
+                octatonicIntervalsAll[2] = String.join("", octatonicIntervals);
                 break;
 
             case "6": //Kuusi intervallia syötetty (OK)
@@ -142,6 +160,10 @@ public class OctatonicIntervals {
                     Collections.rotate(Arrays.asList(octatonicIntervals), 1);
                     octatonicIntervalsAll[i] = String.join("", octatonicIntervals);
                 }
+                Collections.rotate(Arrays.asList(octatonicIntervals), -2);
+                octatonicIntervals[6] = String.valueOf(H);
+                octatonicIntervals[7] = String.valueOf(H);
+                octatonicIntervalsAll[2] = String.join("", octatonicIntervals);
                 break;
 
             case "7": //Seitsemän intervallia syötetty (OK)
@@ -158,6 +180,10 @@ public class OctatonicIntervals {
                     Collections.rotate(Arrays.asList(octatonicIntervals), 1);
                     octatonicIntervalsAll[i] = String.join("", octatonicIntervals);
                 }
+                
+                Collections.rotate(Arrays.asList(octatonicIntervals), -2);
+                octatonicIntervals[7] = String.valueOf(H);
+                octatonicIntervalsAll[2] = String.join("", octatonicIntervals);
                 break;
 
             case "8": //Kahdeksan intervallia syötetty (OK)

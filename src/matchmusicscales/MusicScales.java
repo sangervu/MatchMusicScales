@@ -21,17 +21,18 @@ public class MusicScales {
         points.put("MWHMH", "Hirajoshi scale");
         points.put("HMWHM", "In scale");
         points.put("HMHmW", "Insen scale");
-        points.put("HWHWH", "Istrian scale");
         points.put("HMHMW", "Iwato scale");
         points.put("mWWmW", "Minor pentatonic scale");
         points.put("WmWWm", "Yo scale"); 
         points.put("WWmWm", "Major pentatonic scale");
+        points.put("HWHWH", "Istrian scale");
         
         //hexatonic scales
         points.put("WWWWWW", "Whole tone scale");
         points.put("WWWmHW", "Prometheus scale");
         points.put("HmWHmW", "Tritone scale");
         points.put("mHmHmH", "Augmented scale");
+        points.put("mWHHmW", "Blues scale");
         
         // Chromatic scale
         points.put("HHHHHHH", "Chromatic scale");

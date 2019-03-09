@@ -65,7 +65,7 @@ public class PentatonicIntervals {
                 for (int counterOut = 0; counterOut <= 4; counterOut++) {
                     switch (counterOut) {
                         case 1:
-                            pentatonicIntervals[3] = String.valueOf('W');
+                            pentatonicIntervals[3] = String.valueOf(W);
 
                             this.pentatonicIntervalsAll = gen.getFifthIntervals(pentatonicIntervals, scaleCounter);
                             scaleCounter = gen.getScaleCounter();

@@ -313,6 +313,7 @@ public class MainActivity {
                 // Oktatoniset asteikot
                 CheckIntervals intervalCheck10 = new CheckIntervals();
                 String[] octatonicIntervalsAll7 = octatonic.getAllOctatonicIntervals(Integer.toString(intervallit.length()));
+                //System.out.println(Arrays.toString(octatonicIntervalsAll7));
                 String[] myIntervalsCleanedOcta7 = intervalCheck10.getMyTrueScales(octatonicIntervalsAll7);
 
                 System.out.println("Oktatoniset asteikot:");
