@@ -11,11 +11,26 @@ import java.util.List;
 import java.util.Collections;
 import static matchmusicscales.PentatonicIntervals.scaleCounter;
 
+/**
+ *
+ * @author angervuorisa
+ */
 public class HexatonicIntervals {
 
+    /**
+     *
+     */
     public static LinkedHashSet<String> hashList;
     private String[] hexatonicIntervals = new String[6];
+
+    /**
+     *
+     */
     public String[] hexatonicIntervalsAll = new String[384];
+
+    /**
+     *
+     */
     public String[] myIntervalsCleaned = new String[54612];
 
     char H = 'H'; //Half Step
@@ -27,6 +42,10 @@ public class HexatonicIntervals {
 
     static int charCounter = -1;
 
+    /**
+     *
+     * @param intervallit
+     */
     public void setHexatonicInterval(String intervallit) {
 
         charCounter = charCounter + 1;
@@ -34,6 +53,11 @@ public class HexatonicIntervals {
 
     }
 
+    /**
+     *
+     * @param intervalCount
+     * @return
+     */
     public String[] getAllHexatonicIntervals(String intervalCount) {
 
         int scaleCounter;

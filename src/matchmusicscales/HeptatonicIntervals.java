@@ -8,10 +8,21 @@ import java.util.Arrays;
 import java.util.LinkedHashSet;
 import java.util.Collections;
 
+/**
+ *
+ * @author angervuorisa
+ */
 public class HeptatonicIntervals {
 
+    /**
+     *
+     */
     public static LinkedHashSet<String> hashList;
     private String[] heptatonicIntervals = new String[7];
+
+    /**
+     *
+     */
     public String[] heptatonicIntervalsAll = new String[1791];
     //public String[] myIntervalsCleaned = new String[54612];
 
@@ -24,6 +35,10 @@ public class HeptatonicIntervals {
 
     static int charCounter = -1;
 
+    /**
+     *
+     * @param intervallit
+     */
     public void setHeptatonicInterval(String intervallit) {
 
         charCounter = charCounter + 1;
@@ -31,6 +46,11 @@ public class HeptatonicIntervals {
 
     }
 
+    /**
+     *
+     * @param intervalCount
+     * @return
+     */
     public String[] getAllHeptatonicIntervals(String intervalCount) {
 
         int scaleCounter;
@@ -50,140 +70,30 @@ public class HeptatonicIntervals {
                                     case 1:
                                         heptatonicIntervals[4] = String.valueOf('W');
 
-                                        for (int counterInn = 0; counterInn <= 4; counterInn++) {
-                                            switch (counterInn) {
-                                                case 1:
-                                                    heptatonicIntervals[5] = String.valueOf('W');
-
-                                                    this.heptatonicIntervalsAll = gen.getSeventhIntervals(heptatonicIntervals, scaleCounter);
-                                                    scaleCounter = gen.getScaleCounter();
-
-                                                    break;
-                                                case 2:
-                                                    heptatonicIntervals[5] = String.valueOf(H);
-
-                                                    this.heptatonicIntervalsAll = gen.getSeventhIntervals(heptatonicIntervals, scaleCounter);
-                                                    scaleCounter = gen.getScaleCounter();
-
-                                                    break;
-                                                case 3:
-                                                    heptatonicIntervals[5] = String.valueOf(m);
-
-                                                    this.heptatonicIntervalsAll = gen.getSeventhIntervals(heptatonicIntervals, scaleCounter);
-                                                    scaleCounter = gen.getScaleCounter();
-                                                    break;
-                                                case 4:
-                                                    heptatonicIntervals[5] = String.valueOf(M);
-
-                                                    this.heptatonicIntervalsAll = gen.getSeventhIntervals(heptatonicIntervals, scaleCounter);
-                                                    scaleCounter = gen.getScaleCounter();
-                                                    break;
-                                            }
-                                        }
+                                        this.heptatonicIntervalsAll = gen.getSixthSeventhIntervals(heptatonicIntervals, scaleCounter);
+                                        scaleCounter = gen.getScaleCounter();
 
                                         break;
                                     case 2:
                                         heptatonicIntervals[4] = String.valueOf(H);
 
-                                        for (int counterInn = 0; counterInn <= 4; counterInn++) {
-                                            switch (counterInn) {
-                                                case 1:
-                                                    heptatonicIntervals[5] = String.valueOf('W');
-
-                                                    this.heptatonicIntervalsAll = gen.getSeventhIntervals(heptatonicIntervals, scaleCounter);
-                                                    scaleCounter = gen.getScaleCounter();
-
-                                                    break;
-                                                case 2:
-                                                    heptatonicIntervals[5] = String.valueOf(H);
-
-                                                    this.heptatonicIntervalsAll = gen.getSeventhIntervals(heptatonicIntervals, scaleCounter);
-                                                    scaleCounter = gen.getScaleCounter();
-
-                                                    break;
-                                                case 3:
-                                                    heptatonicIntervals[5] = String.valueOf(m);
-
-                                                    this.heptatonicIntervalsAll = gen.getSeventhIntervals(heptatonicIntervals, scaleCounter);
-                                                    scaleCounter = gen.getScaleCounter();
-                                                    break;
-                                                case 4:
-                                                    heptatonicIntervals[5] = String.valueOf(M);
-
-                                                    this.heptatonicIntervalsAll = gen.getSeventhIntervals(heptatonicIntervals, scaleCounter);
-                                                    scaleCounter = gen.getScaleCounter();
-                                                    break;
-                                            }
-                                        }
+                                        this.heptatonicIntervalsAll = gen.getSixthSeventhIntervals(heptatonicIntervals, scaleCounter);
+                                        scaleCounter = gen.getScaleCounter();
 
                                         break;
                                     case 3:
                                         heptatonicIntervals[4] = String.valueOf(m);
 
-                                        for (int counterInn = 0; counterInn <= 4; counterInn++) {
-                                            switch (counterInn) {
-                                                case 1:
-                                                    heptatonicIntervals[5] = String.valueOf('W');
+                                        this.heptatonicIntervalsAll = gen.getSixthSeventhIntervals(heptatonicIntervals, scaleCounter);
+                                        scaleCounter = gen.getScaleCounter();
 
-                                                    this.heptatonicIntervalsAll = gen.getSeventhIntervals(heptatonicIntervals, scaleCounter);
-                                                    scaleCounter = gen.getScaleCounter();
-
-                                                    break;
-                                                case 2:
-                                                    heptatonicIntervals[5] = String.valueOf(H);
-
-                                                    this.heptatonicIntervalsAll = gen.getSeventhIntervals(heptatonicIntervals, scaleCounter);
-                                                    scaleCounter = gen.getScaleCounter();
-
-                                                    break;
-                                                case 3:
-                                                    heptatonicIntervals[5] = String.valueOf(m);
-
-                                                    this.heptatonicIntervalsAll = gen.getSeventhIntervals(heptatonicIntervals, scaleCounter);
-                                                    scaleCounter = gen.getScaleCounter();
-                                                    break;
-                                                case 4:
-                                                    heptatonicIntervals[5] = String.valueOf(M);
-
-                                                    this.heptatonicIntervalsAll = gen.getSeventhIntervals(heptatonicIntervals, scaleCounter);
-                                                    scaleCounter = gen.getScaleCounter();
-                                                    break;
-                                            }
-                                        }
                                         break;
                                     case 4:
                                         heptatonicIntervals[4] = String.valueOf(M);
 
-                                        for (int counterInn = 0; counterInn <= 4; counterInn++) {
-                                            switch (counterInn) {
-                                                case 1:
-                                                    heptatonicIntervals[5] = String.valueOf('W');
+                                        this.heptatonicIntervalsAll = gen.getSixthSeventhIntervals(heptatonicIntervals, scaleCounter);
+                                        scaleCounter = gen.getScaleCounter();
 
-                                                    this.heptatonicIntervalsAll = gen.getSeventhIntervals(heptatonicIntervals, scaleCounter);
-                                                    scaleCounter = gen.getScaleCounter();
-
-                                                    break;
-                                                case 2:
-                                                    heptatonicIntervals[5] = String.valueOf(H);
-
-                                                    this.heptatonicIntervalsAll = gen.getSeventhIntervals(heptatonicIntervals, scaleCounter);
-                                                    scaleCounter = gen.getScaleCounter();
-
-                                                    break;
-                                                case 3:
-                                                    heptatonicIntervals[5] = String.valueOf(m);
-
-                                                    this.heptatonicIntervalsAll = gen.getSeventhIntervals(heptatonicIntervals, scaleCounter);
-                                                    scaleCounter = gen.getScaleCounter();
-                                                    break;
-                                                case 4:
-                                                    heptatonicIntervals[5] = String.valueOf(M);
-
-                                                    this.heptatonicIntervalsAll = gen.getSeventhIntervals(heptatonicIntervals, scaleCounter);
-                                                    scaleCounter = gen.getScaleCounter();
-                                                    break;
-                                            }
-                                        }
                                         break;
                                 }
                             }
@@ -197,140 +107,30 @@ public class HeptatonicIntervals {
                                     case 1:
                                         heptatonicIntervals[4] = String.valueOf('W');
 
-                                        for (int counterInn = 0; counterInn <= 4; counterInn++) {
-                                            switch (counterInn) {
-                                                case 1:
-                                                    heptatonicIntervals[5] = String.valueOf('W');
-
-                                                    this.heptatonicIntervalsAll = gen.getSeventhIntervals(heptatonicIntervals, scaleCounter);
-                                                    scaleCounter = gen.getScaleCounter();
-
-                                                    break;
-                                                case 2:
-                                                    heptatonicIntervals[5] = String.valueOf(H);
-
-                                                    this.heptatonicIntervalsAll = gen.getSeventhIntervals(heptatonicIntervals, scaleCounter);
-                                                    scaleCounter = gen.getScaleCounter();
-
-                                                    break;
-                                                case 3:
-                                                    heptatonicIntervals[5] = String.valueOf(m);
-
-                                                    this.heptatonicIntervalsAll = gen.getSeventhIntervals(heptatonicIntervals, scaleCounter);
-                                                    scaleCounter = gen.getScaleCounter();
-                                                    break;
-                                                case 4:
-                                                    heptatonicIntervals[5] = String.valueOf(M);
-
-                                                    this.heptatonicIntervalsAll = gen.getSeventhIntervals(heptatonicIntervals, scaleCounter);
-                                                    scaleCounter = gen.getScaleCounter();
-                                                    break;
-                                            }
-                                        }
+                                        this.heptatonicIntervalsAll = gen.getSixthSeventhIntervals(heptatonicIntervals, scaleCounter);
+                                        scaleCounter = gen.getScaleCounter();
 
                                         break;
                                     case 2:
                                         heptatonicIntervals[4] = String.valueOf(H);
 
-                                        for (int counterInn = 0; counterInn <= 4; counterInn++) {
-                                            switch (counterInn) {
-                                                case 1:
-                                                    heptatonicIntervals[5] = String.valueOf('W');
-
-                                                    this.heptatonicIntervalsAll = gen.getSeventhIntervals(heptatonicIntervals, scaleCounter);
-                                                    scaleCounter = gen.getScaleCounter();
-
-                                                    break;
-                                                case 2:
-                                                    heptatonicIntervals[5] = String.valueOf(H);
-
-                                                    this.heptatonicIntervalsAll = gen.getSeventhIntervals(heptatonicIntervals, scaleCounter);
-                                                    scaleCounter = gen.getScaleCounter();
-
-                                                    break;
-                                                case 3:
-                                                    heptatonicIntervals[5] = String.valueOf(m);
-
-                                                    this.heptatonicIntervalsAll = gen.getSeventhIntervals(heptatonicIntervals, scaleCounter);
-                                                    scaleCounter = gen.getScaleCounter();
-                                                    break;
-                                                case 4:
-                                                    heptatonicIntervals[5] = String.valueOf(M);
-
-                                                    this.heptatonicIntervalsAll = gen.getSeventhIntervals(heptatonicIntervals, scaleCounter);
-                                                    scaleCounter = gen.getScaleCounter();
-                                                    break;
-                                            }
-                                        }
+                                        this.heptatonicIntervalsAll = gen.getSixthSeventhIntervals(heptatonicIntervals, scaleCounter);
+                                        scaleCounter = gen.getScaleCounter();
 
                                         break;
                                     case 3:
                                         heptatonicIntervals[4] = String.valueOf(m);
 
-                                        for (int counterInn = 0; counterInn <= 4; counterInn++) {
-                                            switch (counterInn) {
-                                                case 1:
-                                                    heptatonicIntervals[5] = String.valueOf('W');
+                                        this.heptatonicIntervalsAll = gen.getSixthSeventhIntervals(heptatonicIntervals, scaleCounter);
+                                        scaleCounter = gen.getScaleCounter();
 
-                                                    this.heptatonicIntervalsAll = gen.getSeventhIntervals(heptatonicIntervals, scaleCounter);
-                                                    scaleCounter = gen.getScaleCounter();
-
-                                                    break;
-                                                case 2:
-                                                    heptatonicIntervals[5] = String.valueOf(H);
-
-                                                    this.heptatonicIntervalsAll = gen.getSeventhIntervals(heptatonicIntervals, scaleCounter);
-                                                    scaleCounter = gen.getScaleCounter();
-
-                                                    break;
-                                                case 3:
-                                                    heptatonicIntervals[5] = String.valueOf(m);
-
-                                                    this.heptatonicIntervalsAll = gen.getSeventhIntervals(heptatonicIntervals, scaleCounter);
-                                                    scaleCounter = gen.getScaleCounter();
-                                                    break;
-                                                case 4:
-                                                    heptatonicIntervals[5] = String.valueOf(M);
-
-                                                    this.heptatonicIntervalsAll = gen.getSeventhIntervals(heptatonicIntervals, scaleCounter);
-                                                    scaleCounter = gen.getScaleCounter();
-                                                    break;
-                                            }
-                                        }
                                         break;
                                     case 4:
                                         heptatonicIntervals[4] = String.valueOf(M);
 
-                                        for (int counterInn = 0; counterInn <= 4; counterInn++) {
-                                            switch (counterInn) {
-                                                case 1:
-                                                    heptatonicIntervals[5] = String.valueOf('W');
+                                        this.heptatonicIntervalsAll = gen.getSixthSeventhIntervals(heptatonicIntervals, scaleCounter);
+                                        scaleCounter = gen.getScaleCounter();
 
-                                                    this.heptatonicIntervalsAll = gen.getSeventhIntervals(heptatonicIntervals, scaleCounter);
-                                                    scaleCounter = gen.getScaleCounter();
-
-                                                    break;
-                                                case 2:
-                                                    heptatonicIntervals[5] = String.valueOf(H);
-
-                                                    this.heptatonicIntervalsAll = gen.getSeventhIntervals(heptatonicIntervals, scaleCounter);
-                                                    scaleCounter = gen.getScaleCounter();
-
-                                                    break;
-                                                case 3:
-                                                    heptatonicIntervals[5] = String.valueOf(m);
-
-                                                    this.heptatonicIntervalsAll = gen.getSeventhIntervals(heptatonicIntervals, scaleCounter);
-                                                    scaleCounter = gen.getScaleCounter();
-                                                    break;
-                                                case 4:
-                                                    heptatonicIntervals[5] = String.valueOf(M);
-
-                                                    this.heptatonicIntervalsAll = gen.getSeventhIntervals(heptatonicIntervals, scaleCounter);
-                                                    scaleCounter = gen.getScaleCounter();
-                                                    break;
-                                            }
-                                        }
                                         break;
                                 }
                             }
@@ -344,140 +144,32 @@ public class HeptatonicIntervals {
                                     case 1:
                                         heptatonicIntervals[4] = String.valueOf('W');
 
-                                        for (int counterInn = 0; counterInn <= 4; counterInn++) {
-                                            switch (counterInn) {
-                                                case 1:
-                                                    heptatonicIntervals[5] = String.valueOf('W');
-
-                                                    this.heptatonicIntervalsAll = gen.getSeventhIntervals(heptatonicIntervals, scaleCounter);
-                                                    scaleCounter = gen.getScaleCounter();
-
-                                                    break;
-                                                case 2:
-                                                    heptatonicIntervals[5] = String.valueOf(H);
-
-                                                    this.heptatonicIntervalsAll = gen.getSeventhIntervals(heptatonicIntervals, scaleCounter);
-                                                    scaleCounter = gen.getScaleCounter();
-
-                                                    break;
-                                                case 3:
-                                                    heptatonicIntervals[5] = String.valueOf(m);
-
-                                                    this.heptatonicIntervalsAll = gen.getSeventhIntervals(heptatonicIntervals, scaleCounter);
-                                                    scaleCounter = gen.getScaleCounter();
-                                                    break;
-                                                case 4:
-                                                    heptatonicIntervals[5] = String.valueOf(M);
-
-                                                    this.heptatonicIntervalsAll = gen.getSeventhIntervals(heptatonicIntervals, scaleCounter);
-                                                    scaleCounter = gen.getScaleCounter();
-                                                    break;
-                                            }
-                                        }
+                                        this.heptatonicIntervalsAll = gen.getSixthSeventhIntervals(heptatonicIntervals, scaleCounter);
+                                        scaleCounter = gen.getScaleCounter();
 
                                         break;
                                     case 2:
                                         heptatonicIntervals[4] = String.valueOf(H);
 
-                                        for (int counterInn = 0; counterInn <= 4; counterInn++) {
-                                            switch (counterInn) {
-                                                case 1:
-                                                    heptatonicIntervals[5] = String.valueOf('W');
-
-                                                    this.heptatonicIntervalsAll = gen.getSeventhIntervals(heptatonicIntervals, scaleCounter);
-                                                    scaleCounter = gen.getScaleCounter();
-
-                                                    break;
-                                                case 2:
-                                                    heptatonicIntervals[5] = String.valueOf(H);
-
-                                                    this.heptatonicIntervalsAll = gen.getSeventhIntervals(heptatonicIntervals, scaleCounter);
-                                                    scaleCounter = gen.getScaleCounter();
-
-                                                    break;
-                                                case 3:
-                                                    heptatonicIntervals[5] = String.valueOf(m);
-
-                                                    this.heptatonicIntervalsAll = gen.getSeventhIntervals(heptatonicIntervals, scaleCounter);
-                                                    scaleCounter = gen.getScaleCounter();
-                                                    break;
-                                                case 4:
-                                                    heptatonicIntervals[5] = String.valueOf(M);
-
-                                                    this.heptatonicIntervalsAll = gen.getSeventhIntervals(heptatonicIntervals, scaleCounter);
-                                                    scaleCounter = gen.getScaleCounter();
-                                                    break;
-                                            }
-                                        }
+                                        this.heptatonicIntervalsAll = gen.getSixthSeventhIntervals(heptatonicIntervals, scaleCounter);
+                                        scaleCounter = gen.getScaleCounter();
 
                                         break;
+
                                     case 3:
                                         heptatonicIntervals[4] = String.valueOf(m);
 
-                                        for (int counterInn = 0; counterInn <= 4; counterInn++) {
-                                            switch (counterInn) {
-                                                case 1:
-                                                    heptatonicIntervals[5] = String.valueOf('W');
+                                        this.heptatonicIntervalsAll = gen.getSixthSeventhIntervals(heptatonicIntervals, scaleCounter);
+                                        scaleCounter = gen.getScaleCounter();
 
-                                                    this.heptatonicIntervalsAll = gen.getSeventhIntervals(heptatonicIntervals, scaleCounter);
-                                                    scaleCounter = gen.getScaleCounter();
-
-                                                    break;
-                                                case 2:
-                                                    heptatonicIntervals[5] = String.valueOf(H);
-
-                                                    this.heptatonicIntervalsAll = gen.getSeventhIntervals(heptatonicIntervals, scaleCounter);
-                                                    scaleCounter = gen.getScaleCounter();
-
-                                                    break;
-                                                case 3:
-                                                    heptatonicIntervals[5] = String.valueOf(m);
-
-                                                    this.heptatonicIntervalsAll = gen.getSeventhIntervals(heptatonicIntervals, scaleCounter);
-                                                    scaleCounter = gen.getScaleCounter();
-                                                    break;
-                                                case 4:
-                                                    heptatonicIntervals[5] = String.valueOf(M);
-
-                                                    this.heptatonicIntervalsAll = gen.getSeventhIntervals(heptatonicIntervals, scaleCounter);
-                                                    scaleCounter = gen.getScaleCounter();
-                                                    break;
-                                            }
-                                        }
                                         break;
+
                                     case 4:
                                         heptatonicIntervals[4] = String.valueOf(M);
 
-                                        for (int counterInn = 0; counterInn <= 4; counterInn++) {
-                                            switch (counterInn) {
-                                                case 1:
-                                                    heptatonicIntervals[5] = String.valueOf('W');
+                                        this.heptatonicIntervalsAll = gen.getSixthSeventhIntervals(heptatonicIntervals, scaleCounter);
+                                        scaleCounter = gen.getScaleCounter();
 
-                                                    this.heptatonicIntervalsAll = gen.getSeventhIntervals(heptatonicIntervals, scaleCounter);
-                                                    scaleCounter = gen.getScaleCounter();
-
-                                                    break;
-                                                case 2:
-                                                    heptatonicIntervals[5] = String.valueOf(H);
-
-                                                    this.heptatonicIntervalsAll = gen.getSeventhIntervals(heptatonicIntervals, scaleCounter);
-                                                    scaleCounter = gen.getScaleCounter();
-
-                                                    break;
-                                                case 3:
-                                                    heptatonicIntervals[5] = String.valueOf(m);
-
-                                                    this.heptatonicIntervalsAll = gen.getSeventhIntervals(heptatonicIntervals, scaleCounter);
-                                                    scaleCounter = gen.getScaleCounter();
-                                                    break;
-                                                case 4:
-                                                    heptatonicIntervals[5] = String.valueOf(M);
-
-                                                    this.heptatonicIntervalsAll = gen.getSeventhIntervals(heptatonicIntervals, scaleCounter);
-                                                    scaleCounter = gen.getScaleCounter();
-                                                    break;
-                                            }
-                                        }
                                         break;
                                 }
                             }
@@ -490,141 +182,30 @@ public class HeptatonicIntervals {
                                     case 1:
                                         heptatonicIntervals[4] = String.valueOf('W');
 
-                                        for (int counterInn = 0; counterInn <= 4; counterInn++) {
-                                            switch (counterInn) {
-                                                case 1:
-                                                    heptatonicIntervals[5] = String.valueOf('W');
-
-                                                    this.heptatonicIntervalsAll = gen.getSeventhIntervals(heptatonicIntervals, scaleCounter);
-                                                    scaleCounter = gen.getScaleCounter();
-
-                                                    break;
-                                                case 2:
-                                                    heptatonicIntervals[5] = String.valueOf(H);
-
-                                                    this.heptatonicIntervalsAll = gen.getSeventhIntervals(heptatonicIntervals, scaleCounter);
-                                                    scaleCounter = gen.getScaleCounter();
-
-                                                    break;
-                                                case 3:
-                                                    heptatonicIntervals[5] = String.valueOf(m);
-
-                                                    this.heptatonicIntervalsAll = gen.getSeventhIntervals(heptatonicIntervals, scaleCounter);
-                                                    scaleCounter = gen.getScaleCounter();
-                                                    break;
-                                                case 4:
-                                                    heptatonicIntervals[5] = String.valueOf(M);
-
-                                                    this.heptatonicIntervalsAll = gen.getSeventhIntervals(heptatonicIntervals, scaleCounter);
-                                                    scaleCounter = gen.getScaleCounter();
-                                                    break;
-                                            }
-                                        }
+                                        this.heptatonicIntervalsAll = gen.getSixthSeventhIntervals(heptatonicIntervals, scaleCounter);
+                                        scaleCounter = gen.getScaleCounter();
 
                                         break;
                                     case 2:
                                         heptatonicIntervals[4] = String.valueOf(H);
 
-                                        for (int counterInn = 0; counterInn <= 4; counterInn++) {
-                                            switch (counterInn) {
-                                                case 1:
-                                                    heptatonicIntervals[5] = String.valueOf('W');
-
-                                                    this.heptatonicIntervalsAll = gen.getSeventhIntervals(heptatonicIntervals, scaleCounter);
-                                                    scaleCounter = gen.getScaleCounter();
-
-                                                    break;
-                                                case 2:
-                                                    heptatonicIntervals[5] = String.valueOf(H);
-
-                                                    this.heptatonicIntervalsAll = gen.getSeventhIntervals(heptatonicIntervals, scaleCounter);
-                                                    scaleCounter = gen.getScaleCounter();
-
-                                                    break;
-                                                case 3:
-                                                    heptatonicIntervals[5] = String.valueOf(m);
-
-                                                    this.heptatonicIntervalsAll = gen.getSeventhIntervals(heptatonicIntervals, scaleCounter);
-                                                    scaleCounter = gen.getScaleCounter();
-                                                    break;
-                                                case 4:
-                                                    heptatonicIntervals[5] = String.valueOf(M);
-
-                                                    this.heptatonicIntervalsAll = gen.getSeventhIntervals(heptatonicIntervals, scaleCounter);
-                                                    scaleCounter = gen.getScaleCounter();
-                                                    break;
-                                            }
-                                        }
+                                        this.heptatonicIntervalsAll = gen.getSixthSeventhIntervals(heptatonicIntervals, scaleCounter);
+                                        scaleCounter = gen.getScaleCounter();
 
                                         break;
                                     case 3:
                                         heptatonicIntervals[4] = String.valueOf(m);
 
-                                        for (int counterInn = 0; counterInn <= 4; counterInn++) {
-                                            switch (counterInn) {
-                                                case 1:
-                                                    heptatonicIntervals[5] = String.valueOf('W');
+                                        this.heptatonicIntervalsAll = gen.getSixthSeventhIntervals(heptatonicIntervals, scaleCounter);
+                                        scaleCounter = gen.getScaleCounter();
 
-                                                    this.heptatonicIntervalsAll = gen.getSeventhIntervals(heptatonicIntervals, scaleCounter);
-                                                    scaleCounter = gen.getScaleCounter();
-
-                                                    break;
-                                                case 2:
-                                                    heptatonicIntervals[5] = String.valueOf(H);
-
-                                                    this.heptatonicIntervalsAll = gen.getSeventhIntervals(heptatonicIntervals, scaleCounter);
-                                                    scaleCounter = gen.getScaleCounter();
-
-                                                    break;
-                                                case 3:
-                                                    heptatonicIntervals[5] = String.valueOf(m);
-
-                                                    this.heptatonicIntervalsAll = gen.getSeventhIntervals(heptatonicIntervals, scaleCounter);
-                                                    scaleCounter = gen.getScaleCounter();
-                                                    break;
-                                                case 4:
-                                                    heptatonicIntervals[5] = String.valueOf(M);
-
-                                                    this.heptatonicIntervalsAll = gen.getSeventhIntervals(heptatonicIntervals, scaleCounter);
-                                                    scaleCounter = gen.getScaleCounter();
-                                                    break;
-                                            }
-                                        }
                                         break;
                                     case 4:
                                         heptatonicIntervals[4] = String.valueOf(M);
 
-                                        for (int counterInn = 0; counterInn <= 4; counterInn++) {
-                                            switch (counterInn) {
-                                                case 1:
-                                                    heptatonicIntervals[5] = String.valueOf('W');
+                                        this.heptatonicIntervalsAll = gen.getSixthSeventhIntervals(heptatonicIntervals, scaleCounter);
+                                        scaleCounter = gen.getScaleCounter();
 
-                                                    this.heptatonicIntervalsAll = gen.getSeventhIntervals(heptatonicIntervals, scaleCounter);
-                                                    scaleCounter = gen.getScaleCounter();
-
-                                                    break;
-                                                case 2:
-                                                    heptatonicIntervals[5] = String.valueOf(H);
-
-                                                    this.heptatonicIntervalsAll = gen.getSeventhIntervals(heptatonicIntervals, scaleCounter);
-                                                    scaleCounter = gen.getScaleCounter();
-
-                                                    break;
-                                                case 3:
-                                                    heptatonicIntervals[5] = String.valueOf(m);
-
-                                                    this.heptatonicIntervalsAll = gen.getSeventhIntervals(heptatonicIntervals, scaleCounter);
-                                                    scaleCounter = gen.getScaleCounter();
-                                                    break;
-                                                case 4:
-                                                    heptatonicIntervals[5] = String.valueOf(M);
-
-                                                    this.heptatonicIntervalsAll = gen.getSeventhIntervals(heptatonicIntervals, scaleCounter);
-                                                    scaleCounter = gen.getScaleCounter();
-                                                    //System.out.println(scaleCounter);
-                                                    break;
-                                            }
-                                        }
                                         break;
                                 }
                             }

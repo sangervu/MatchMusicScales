@@ -8,10 +8,21 @@ import java.util.Arrays;
 import java.util.LinkedHashSet;
 import java.util.Collections;
 
+/**
+ *
+ * @author angervuorisa
+ */
 public class OctatonicIntervals {
 
+    /**
+     *
+     */
     public static LinkedHashSet<String> hashList;
     private String[] octatonicIntervals = new String[8];
+
+    /**
+     *
+     */
     public String[] octatonicIntervalsAll = new String[80];
 
     char H = 'H'; //Half Step
@@ -23,6 +34,10 @@ public class OctatonicIntervals {
 
     static int charCounter = -1;
 
+    /**
+     *
+     * @param intervallit
+     */
     public void setOctatonicInterval(String intervallit) {
 
         charCounter = charCounter + 1;
@@ -30,6 +45,11 @@ public class OctatonicIntervals {
 
     }
 
+    /**
+     *
+     * @param intervalCount
+     * @return
+     */
     public String[] getAllOctatonicIntervals(String intervalCount) {
 
         switch (intervalCount) {

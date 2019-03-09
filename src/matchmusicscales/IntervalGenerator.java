@@ -6,6 +6,10 @@ import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Collections;
 
+/**
+ *
+ * @author angervuorisa
+ */
 public class IntervalGenerator {
 
     char H = 'H'; //Half Step
@@ -15,6 +19,12 @@ public class IntervalGenerator {
     String[] newIntervals = new String[1800];
     int scaleCounter;
 
+    /**
+     *
+     * @param intervals
+     * @param scaleCounter
+     * @return
+     */
     public String[] getFifthIntervals(String[] intervals, int scaleCounter) {
 
         for (int counterIn = 0; counterIn <= 4; counterIn++) {
@@ -65,6 +75,12 @@ public class IntervalGenerator {
 
     }
 
+    /**
+     *
+     * @param intervals
+     * @param scaleCounter
+     * @return
+     */
     public String[] getSixthIntervals(String[] intervals, int scaleCounter) {
 
         for (int counterIn = 0; counterIn <= 4; counterIn++) {
@@ -115,6 +131,12 @@ public class IntervalGenerator {
 
     }
 
+    /**
+     *
+     * @param intervals
+     * @param scaleCounter
+     * @return
+     */
     public String[] getSeventhIntervals(String[] intervals, int scaleCounter) {
 
         for (int counterIn = 0; counterIn <= 4; counterIn++) {
@@ -160,11 +182,50 @@ public class IntervalGenerator {
             }
         }
         this.scaleCounter = scaleCounter;
-
         return newIntervals;
 
     }
 
+    public String[] getSixthSeventhIntervals(String[] intervals, int scaleCounter) {
+        // haetaan septatonisen asteikon kuudes ja seitsemäs intervalli
+        for (int counterInn = 0; counterInn <= 4; counterInn++) {
+            switch (counterInn) {
+                case 1:
+                    intervals[5] = String.valueOf('W');
+
+                    this.newIntervals = getSeventhIntervals(intervals, scaleCounter);
+                    scaleCounter = getScaleCounter();
+
+                    break;
+                case 2:
+                    intervals[5] = String.valueOf(H);
+
+                    this.newIntervals = getSeventhIntervals(intervals, scaleCounter);
+                    scaleCounter = getScaleCounter();
+
+                    break;
+                case 3:
+                    intervals[5] = String.valueOf(m);
+
+                    this.newIntervals = getSeventhIntervals(intervals, scaleCounter);
+                    scaleCounter = getScaleCounter();
+                    break;
+                case 4:
+                    intervals[5] = String.valueOf(M);
+
+                    this.newIntervals = getSeventhIntervals(intervals, scaleCounter);
+                    scaleCounter = getScaleCounter();
+                    break;
+            }
+        }
+        this.scaleCounter = scaleCounter;
+        return newIntervals;
+    }
+
+    /**
+     *
+     * @return
+     */
     public int getScaleCounter() {
 
         return scaleCounter;

@@ -5,6 +5,10 @@ import java.util.Arrays;
 import java.util.LinkedHashSet;
 import java.util.List;
 
+/**
+ *
+ * @author angervuorisa
+ */
 public class CheckIntervals {
 
     String[] myIntervalsReal = new String[79]; //Taulukon koko pitää olla riittävän suuri
@@ -14,6 +18,11 @@ public class CheckIntervals {
     MusicScales scales = new MusicScales();
 
     //int laskuri = -1;
+    /**
+     *
+     * @param intervals
+     * @return
+     */
     public String[] getMyTrueScales(String[] intervals) {
 
         MusicScales scales = new MusicScales();
@@ -37,6 +46,11 @@ public class CheckIntervals {
         return myIntervalsCleaned;
     }
 
+    /**
+     *
+     * @param intervals
+     * @return
+     */
     public String[] getCleanScales(String[] intervals) {
         //* Creating ArrayList of Array
         List<String> myIntervalsList = new ArrayList<String>(Arrays.asList(intervals));
@@ -56,12 +70,12 @@ public class CheckIntervals {
         myIntervalsCleaned = hashList.toArray(myIntevalsCleanedAll);
         return myIntervalsCleaned;
     }
-    
-    public void resetScales(){
 
+    /**
+     *
+     */
+    public void resetScales() {
 
+    }
 
-
-} 
-    
 }

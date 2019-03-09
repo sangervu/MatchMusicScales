@@ -6,10 +6,21 @@ package matchmusicscales;
 import java.util.Arrays;
 import java.util.Scanner;
 
+/**
+ *
+ * @author angervuorisa
+ */
 public class MainActivity {
 
+    /**
+     *
+     */
     public static String intervallit;
 
+    /**
+     *
+     * @param args
+     */
     public static void main(String[] args) {
 
         char H = 'H'; //Half Step
@@ -30,7 +41,7 @@ public class MainActivity {
         System.out.println("Syötä intervallit W, H, m, tai M (min kolme ja max kahdeksan intervallia)");
         intervallit = input.nextLine();
 
-        if (intervallit.length() < 3 && intervallit.length() > 8) {
+        if (intervallit.length() < 3 || intervallit.length() > 8) {
             System.out.println("Intervalleja ei saa olla alle kolme, tai yli kahdeksan");
         }
 
@@ -42,6 +53,7 @@ public class MainActivity {
 
                     if ((intervallit.charAt(i) != W) && (intervallit.charAt(i) != H) && (intervallit.charAt(i) != m) && (intervallit.charAt(i) != M)) {
                         System.out.println("intervalleja ei tunnistettu");
+                        System.exit(i);
                     } else {
                         pentatonic.setPentatonicInterval(String.valueOf(intervallit.charAt(i)));
                         hexatonic.setHexatonicInterval(String.valueOf(intervallit.charAt(i)));
@@ -103,6 +115,7 @@ public class MainActivity {
 
                     if ((intervallit.charAt(i) != W) && (intervallit.charAt(i) != H) && (intervallit.charAt(i) != m) && (intervallit.charAt(i) != M)) {
                         System.out.println("intervalleja ei tunnistettu");
+                        System.exit(i);
                     } else {
                         pentatonic.setPentatonicInterval(String.valueOf(intervallit.charAt(i)));
                         hexatonic.setHexatonicInterval(String.valueOf(intervallit.charAt(i)));
@@ -165,6 +178,7 @@ public class MainActivity {
 
                     if ((intervallit.charAt(i) != W) && (intervallit.charAt(i) != H) && (intervallit.charAt(i) != m) && (intervallit.charAt(i) != M)) {
                         System.out.println("intervalleja ei tunnistettu");
+                        System.exit(i);
                     } else {
                         pentatonic.setPentatonicInterval(String.valueOf(intervallit.charAt(i)));
                         hexatonic.setHexatonicInterval(String.valueOf(intervallit.charAt(i)));
@@ -227,6 +241,7 @@ public class MainActivity {
 
                     if ((intervallit.charAt(i) != W) && (intervallit.charAt(i) != H) && (intervallit.charAt(i) != m) && (intervallit.charAt(i) != M)) {
                         System.out.println("intervalleja ei tunnistettu");
+                        System.exit(i);
                     } else {
                         hexatonic.setHexatonicInterval(String.valueOf(intervallit.charAt(i)));
                         heptatonic.setHeptatonicInterval(String.valueOf(intervallit.charAt(i)));
@@ -276,6 +291,7 @@ public class MainActivity {
 
                     if ((intervallit.charAt(i) != W) && (intervallit.charAt(i) != H) && (intervallit.charAt(i) != m) && (intervallit.charAt(i) != M)) {
                         System.out.println("intervalleja ei tunnistettu");
+                        System.exit(i);
                     } else {
 
                         heptatonic.setHeptatonicInterval(String.valueOf(intervallit.charAt(i)));
@@ -315,8 +331,8 @@ public class MainActivity {
 
                     if ((intervallit.charAt(i) != W) && (intervallit.charAt(i) != H) && (intervallit.charAt(i) != m) && (intervallit.charAt(i) != M)) {
                         System.out.println("intervalleja ei tunnistettu");
+                        System.exit(i);
                     } else {
-
                         octatonic.setOctatonicInterval(String.valueOf(intervallit.charAt(i)));
                     }
                 }
