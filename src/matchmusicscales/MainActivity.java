@@ -6,7 +6,6 @@ package matchmusicscales;
 import java.util.Scanner;
 
 /**
- *
  * @author angervuorisa
  */
 public class MainActivity {
@@ -17,7 +16,6 @@ public class MainActivity {
     public static String intervallit;
 
     /**
-     *
      * @param args
      */
     public static void main(String[] args) {
