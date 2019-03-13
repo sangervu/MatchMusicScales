@@ -3,7 +3,6 @@ package matchmusicscales;
 /**
  * @author Sakari Angervuori
  */
-import java.util.Arrays;
 import java.util.Scanner;
 
 /**
@@ -73,10 +72,11 @@ public class MainActivity {
                     System.out.println("N.A.");
                 }
 
+                intervalCheck.resetScales();
                 //Hexatoniset asteikot
-                CheckIntervals intervalCheck111 = new CheckIntervals();
+                //CheckIntervals intervalCheck111 = new CheckIntervals();
                 String[] hexatonicIntervalsAll3 = hexatonic.getAllHexatonicIntervals(Integer.toString(intervallit.length()));
-                String[] myIntervalsCleanedHexa3 = intervalCheck111.getMyTrueScales(hexatonicIntervalsAll3);
+                String[] myIntervalsCleanedHexa3 = intervalCheck.getMyTrueScales(hexatonicIntervalsAll3);
                 System.out.println("Hexatoniset asteikot:");
                 for (String t : myIntervalsCleanedHexa3) {
                     System.out.println(t + " = " + scales.getScales(t));

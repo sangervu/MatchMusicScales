@@ -17,7 +17,7 @@ public class CheckIntervals {
 
     MusicScales scales = new MusicScales();
 
-    //int laskuri = -1;
+    private int laskuri = -1;
     /**
      *
      * @param intervals
@@ -27,7 +27,7 @@ public class CheckIntervals {
 
         MusicScales scales = new MusicScales();
 
-        int laskuri = -1;
+        //int laskuri = -1;
 
         //puhdistetun taulukon koko, jossa kaikki ovat potentiaalisia skaaloja
         //luupin pituus saa olla max taulukon koko
@@ -75,6 +75,10 @@ public class CheckIntervals {
      *
      */
     public void resetScales() {
+        
+        laskuri=-1;
+        
+        
 
     }
 
