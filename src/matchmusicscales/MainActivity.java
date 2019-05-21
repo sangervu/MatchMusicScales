@@ -3,7 +3,12 @@ package matchmusicscales;
 /**
  * @author Sakari Angervuori
  */
+import java.awt.Color;
+import static java.awt.SystemColor.text;
+import java.awt.font.TextAttribute;
+import java.text.AttributedString;
 import java.util.Scanner;
+import java.awt.*;
 
 /**
  * @author angervuorisa
