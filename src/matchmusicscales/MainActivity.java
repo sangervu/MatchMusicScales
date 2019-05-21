@@ -112,7 +112,7 @@ public class MainActivity {
                 }
                 break;
 
-            case 4: // annettu neljä intervallia (OK)
+            case 4: // annettu neljä intervallia
                 for (int i = 0; i < intervallit.length(); i++) {
 
                     if ((intervallit.charAt(i) != W) && (intervallit.charAt(i) != H) && (intervallit.charAt(i) != m) && (intervallit.charAt(i) != M)) {
@@ -174,7 +174,7 @@ public class MainActivity {
                 }
                 break;
 
-            case 5: //annettu viisi intervallia (OK)
+            case 5: //annettu viisi intervallia
 
                 for (int i = 0; i < intervallit.length(); i++) {
 
@@ -237,7 +237,7 @@ public class MainActivity {
                 }
                 break;
 
-            case 6: //annettu kuusi intervallia (OK)
+            case 6: //annettu kuusi intervallia
 
                 for (int i = 0; i < intervallit.length(); i++) {
 
@@ -287,7 +287,7 @@ public class MainActivity {
                 }
                 break;
 
-            case 7: //annettu seitemän intervallia (OK)
+            case 7: //annettu seitemän intervallia
 
                 for (int i = 0; i < intervallit.length(); i++) {
 
@@ -328,7 +328,7 @@ public class MainActivity {
 
                 break;
 
-            case 8: // annettu kahdeksan intervallia (OK)
+            case 8: // annettu kahdeksan intervallia
 
                 for (int i = 0; i < intervallit.length(); i++) {
 
