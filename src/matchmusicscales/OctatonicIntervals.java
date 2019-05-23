@@ -39,10 +39,8 @@ public class OctatonicIntervals {
      * @param intervallit
      */
     public void setOctatonicInterval(String intervallit) {
-
         charCounter = charCounter + 1;
         octatonicIntervals[charCounter] = intervallit;
-
     }
 
     /**
