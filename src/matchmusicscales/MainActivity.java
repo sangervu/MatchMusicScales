@@ -342,6 +342,18 @@ public class MainActivity {
 
                 String[] octatonicIntervalsAll8 = octatonic.getAllOctatonicIntervals(Integer.toString(intervallit.length()));
                 String[] myIntervalsCleanedOcta8 = intervalCheckA.getMyTrueScales(octatonicIntervalsAll8);
+                
+                //testausta varten
+                System.out.println("octatonicIntervalsAll8:");
+                for (String t :octatonicIntervalsAll8 ){
+                System.out.println(t);
+                }
+               
+                //testausta varten
+                System.out.println("myIntervalsCleanedOcta8:");
+                for (String t : myIntervalsCleanedOcta8){
+                System.out.println(t);
+                }
 
                 System.out.println("Oktatoniset asteikot:");
                 for (String t : myIntervalsCleanedOcta8) {
