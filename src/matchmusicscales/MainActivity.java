@@ -43,47 +43,18 @@ public class MainActivity {
         CheckIntervals intervalCheck3 = new CheckIntervals();
         CheckIntervals intervalCheck4 = new CheckIntervals();
        
-        //Asteikot kun viisi intervallia on annettu:
         //Pentatoniset asteikot
-        String[] myIntervalsCleanedForPenta5;
-        String[] pentatonicIntervalsForAll5;
+        String[] myIntervalsCleanedForPenta;
+        String[] pentatonicIntervalsForAll;
         //Hexatoniset asetikot
-        String[] myIntervalsCleanedForHexa5;
-        String[] hexatonicIntervalsForAll5;
+        String[] myIntervalsCleanedForHexa;
+        String[] hexatonicIntervalsForAll;
         //Henptatoniset asetikot
-        String[] myIntervalsCleanedForHepta5;
-        String[] heptatonicIntervalsForAll5;    
+        String[] myIntervalsCleanedForHepta;
+        String[] heptatonicIntervalsForAll;    
         //Octatoniset asetikot
-        String[] myIntervalsCleanedForOcta5;
-        String[] octatonicIntervalsForAll5;
-        
-       //Asteikot kun kuusi intervallia on annettu:
-        
-        //Hexatoniset asetikot
-        String[] myIntervalsCleanedForHexa6;
-        String[] hexatonicIntervalsForAll6;
-        //Henptatoniset asetikot
-        String[] myIntervalsCleanedForHepta6;
-        String[] heptatonicIntervalsForAll6;
-        //Octatoniset asetikot
-        String[] myIntervalsCleanedForOcta6;
-        String[] octatonicIntervalsForAll6;
-        
-        //Asteikot kun seitsemän intervallia on annettu:
-        
-        //Henptatoniset asetikot         
-        String[] myIntervalsCleanedForHepta7;
-        String[] heptatonicIntervalsForAll7;
-        //Octatoniset asetikot 
-        String[] myIntervalsCleanedForOcta7;
-        String[] octatonicIntervalsForAll7;
-        
-        //Asteikot kun kahdeksan intervallia on annettu:
-        
-        //Octatoniset asetikot
-        String[] myIntervalsCleanedForOcta8;
-        String[] octatonicIntervalsForAll8;
-        
+        String[] myIntervalsCleanedForOcta;
+        String[] octatonicIntervalsForAll;
 
         System.out.println("Syötä intervallit W, H, m, tai M (min kolme ja max kahdeksan intervallia)");
         intervallit = input.nextLine();
@@ -110,24 +81,24 @@ public class MainActivity {
                 } 
 
                 //Pentatoniset asteikot
-                pentatonicIntervalsForAll5 = pentatonic.getAllPentatonicIntervals(Integer.toString(intervallit.length()));
-                myIntervalsCleanedForPenta5 = intervalCheck1.getMyTrueScales(pentatonicIntervalsForAll5);
+                pentatonicIntervalsForAll = pentatonic.getAllPentatonicIntervals(Integer.toString(intervallit.length()));
+                myIntervalsCleanedForPenta = intervalCheck1.getMyTrueScales(pentatonicIntervalsForAll);
                 System.out.println("Pentatoniset asteikot:");
-                for (String t : myIntervalsCleanedForPenta5) {
+                for (String t : myIntervalsCleanedForPenta) {
                     System.out.println(t + " = " + scales.getScales(t));
                 }
-                if (myIntervalsCleanedForPenta5.length == 0) {
+                if (myIntervalsCleanedForPenta.length == 0) {
                     System.out.println("N.A.");
                 }
 
                 //Hexatoniset asteikot
-                hexatonicIntervalsForAll5 = hexatonic.getAllHexatonicIntervals(Integer.toString(intervallit.length()));
-                myIntervalsCleanedForHexa5 = intervalCheck2.getMyTrueScales(hexatonicIntervalsForAll5);
+                hexatonicIntervalsForAll = hexatonic.getAllHexatonicIntervals(Integer.toString(intervallit.length()));
+                myIntervalsCleanedForHexa = intervalCheck2.getMyTrueScales(hexatonicIntervalsForAll);
                 System.out.println("Hexatoniset asteikot:");
-                for (String t : myIntervalsCleanedForHexa5) {
+                for (String t : myIntervalsCleanedForHexa) {
                     System.out.println(t + " = " + scales.getScales(t));
                 }
-                if (myIntervalsCleanedForHexa5.length == 0) {
+                if (myIntervalsCleanedForHexa.length == 0) {
                     System.out.println("N.A.");
                 }
 
@@ -169,46 +140,46 @@ public class MainActivity {
                 }
 
                 //Pentatoniset asteikot
-                pentatonicIntervalsForAll5 = pentatonic.getAllPentatonicIntervals(Integer.toString(intervallit.length()));
-                myIntervalsCleanedForPenta5 = intervalCheck1.getMyTrueScales(pentatonicIntervalsForAll5);
+                pentatonicIntervalsForAll = pentatonic.getAllPentatonicIntervals(Integer.toString(intervallit.length()));
+                myIntervalsCleanedForPenta = intervalCheck1.getMyTrueScales(pentatonicIntervalsForAll);
                 System.out.println("Pentatoniset asteikot:");
-                for (String t : myIntervalsCleanedForPenta5) {
+                for (String t : myIntervalsCleanedForPenta) {
                     System.out.println(t + " = " + scales.getScales(t));
                 }
-                if (myIntervalsCleanedForPenta5.length == 0) {
+                if (myIntervalsCleanedForPenta.length == 0) {
                     System.out.println("N.A.");
                 }
 
                 //Hexatoniset asteikot
-                hexatonicIntervalsForAll5 = hexatonic.getAllHexatonicIntervals(Integer.toString(intervallit.length()));
-                myIntervalsCleanedForHexa5 = intervalCheck2.getMyTrueScales(hexatonicIntervalsForAll5);
+                hexatonicIntervalsForAll = hexatonic.getAllHexatonicIntervals(Integer.toString(intervallit.length()));
+                myIntervalsCleanedForHexa = intervalCheck2.getMyTrueScales(hexatonicIntervalsForAll);
                 System.out.println("Hexatoniset asteikot:");
-                for (String t : myIntervalsCleanedForHexa5) {
+                for (String t : myIntervalsCleanedForHexa) {
                     System.out.println(t + " = " + scales.getScales(t));
                 }
-                if (myIntervalsCleanedForHexa5.length == 0) {
+                if (myIntervalsCleanedForHexa.length == 0) {
                     System.out.println("N.A.");
                 }
 
                 // Heptatoniset asteikeot
-                heptatonicIntervalsForAll5 = heptatonic.getAllHeptatonicIntervals(Integer.toString(intervallit.length()));
-                myIntervalsCleanedForHepta5 = intervalCheck3.getMyTrueScales(heptatonicIntervalsForAll5);
+                heptatonicIntervalsForAll = heptatonic.getAllHeptatonicIntervals(Integer.toString(intervallit.length()));
+                myIntervalsCleanedForHepta = intervalCheck3.getMyTrueScales(heptatonicIntervalsForAll);
                 System.out.println("Heptatoniset asteikot:");
-                for (String t : myIntervalsCleanedForHepta5) {
+                for (String t : myIntervalsCleanedForHepta) {
                     System.out.println(t + " = " + scales.getScales(t));
                 }
-                if (myIntervalsCleanedForHepta5.length == 0) {
+                if (myIntervalsCleanedForHepta.length == 0) {
                     System.out.println("N.A.");
                 }
 
                 //Oktatoniset asteikot
-                octatonicIntervalsForAll5 = octatonic.getAllOctatonicIntervals(Integer.toString(intervallit.length()));
-                myIntervalsCleanedForOcta5 = intervalCheck4.getMyTrueScales(octatonicIntervalsForAll5);
+                octatonicIntervalsForAll = octatonic.getAllOctatonicIntervals(Integer.toString(intervallit.length()));
+                myIntervalsCleanedForOcta = intervalCheck4.getMyTrueScales(octatonicIntervalsForAll);
                 System.out.println("Oktatoniset asteikot:");
-                for (String t : myIntervalsCleanedForOcta5) {
+                for (String t : myIntervalsCleanedForOcta) {
                     System.out.println(t + " = " + scales.getScales(t));
                 }
-                if (myIntervalsCleanedForOcta5.length == 0) {
+                if (myIntervalsCleanedForOcta.length == 0) {
                     System.out.println("N.A.");
                 }
                 break;
@@ -229,46 +200,46 @@ public class MainActivity {
                 }
 
                 //Pentatoniset asteikot
-                pentatonicIntervalsForAll5 = pentatonic.getAllPentatonicIntervals(Integer.toString(intervallit.length()));
-                myIntervalsCleanedForPenta5 = intervalCheck1.getMyTrueScales(pentatonicIntervalsForAll5);
+                pentatonicIntervalsForAll = pentatonic.getAllPentatonicIntervals(Integer.toString(intervallit.length()));
+                myIntervalsCleanedForPenta = intervalCheck1.getMyTrueScales(pentatonicIntervalsForAll);
                 System.out.println("Pentatoniset asteikot:");
-                for (String t : myIntervalsCleanedForPenta5) {
+                for (String t : myIntervalsCleanedForPenta) {
                     System.out.println(t + " = " + scales.getScales(t));
                 }
-                if (myIntervalsCleanedForPenta5.length == 0) {
+                if (myIntervalsCleanedForPenta.length == 0) {
                     System.out.println("N.A.");
                 }
 
                 //Hexatoniset asteikot
-                hexatonicIntervalsForAll5 = hexatonic.getAllHexatonicIntervals(Integer.toString(intervallit.length()));
-                myIntervalsCleanedForHexa5 = intervalCheck2.getMyTrueScales(hexatonicIntervalsForAll5);
+                hexatonicIntervalsForAll = hexatonic.getAllHexatonicIntervals(Integer.toString(intervallit.length()));
+                myIntervalsCleanedForHexa = intervalCheck2.getMyTrueScales(hexatonicIntervalsForAll);
                 System.out.println("Hexatoniset asteikot:");
-                for (String t : myIntervalsCleanedForHexa5) {
+                for (String t : myIntervalsCleanedForHexa) {
                     System.out.println(t + " = " + scales.getScales(t));
                 }
-                if (myIntervalsCleanedForHexa5.length == 0) {
+                if (myIntervalsCleanedForHexa.length == 0) {
                     System.out.println("N.A.");
                 }
 
                 // Heptatoniset asteikeot
-                heptatonicIntervalsForAll5 = heptatonic.getAllHeptatonicIntervals(Integer.toString(intervallit.length()));
-                myIntervalsCleanedForHepta5 = intervalCheck3.getMyTrueScales(heptatonicIntervalsForAll5);
+                heptatonicIntervalsForAll = heptatonic.getAllHeptatonicIntervals(Integer.toString(intervallit.length()));
+                myIntervalsCleanedForHepta = intervalCheck3.getMyTrueScales(heptatonicIntervalsForAll);
                 System.out.println("Heptatoniset asteikot:");
-                for (String t : myIntervalsCleanedForHepta5) {
+                for (String t : myIntervalsCleanedForHepta) {
                     System.out.println(t + " = " + scales.getScales(t));
                 }
-                if (myIntervalsCleanedForHepta5.length == 0) {
+                if (myIntervalsCleanedForHepta.length == 0) {
                     System.out.println("N.A.");
                 }
 
                 //Oktatoniset asteikot
-                String[] octatonicIntervalsAll5 = octatonic.getAllOctatonicIntervals(Integer.toString(intervallit.length()));
-                String[] myIntervalsCleanedOcta5 = intervalCheck4.getMyTrueScales(octatonicIntervalsAll5);
+                String[] octatonicIntervalsAll = octatonic.getAllOctatonicIntervals(Integer.toString(intervallit.length()));
+                String[] myIntervalsCleanedOcta = intervalCheck4.getMyTrueScales(octatonicIntervalsAll);
                 System.out.println("Oktatoniset asteikot:");
-                for (String t : myIntervalsCleanedOcta5) {
+                for (String t : myIntervalsCleanedOcta) {
                     System.out.println(t + " = " + scales.getScales(t));
                 }
-                if (myIntervalsCleanedOcta5.length == 0) {
+                if (myIntervalsCleanedOcta.length == 0) {
                     System.out.println("N.A.");
                 }
                 break;
@@ -288,48 +259,48 @@ public class MainActivity {
                 }
 
                 //Hexatoniset asteikot
-                hexatonicIntervalsForAll6 = hexatonic.getAllHexatonicIntervals(Integer.toString(intervallit.length()));
-                myIntervalsCleanedForHexa6 = intervalCheck1.getMyTrueScales(hexatonicIntervalsForAll6);
+                hexatonicIntervalsForAll = hexatonic.getAllHexatonicIntervals(Integer.toString(intervallit.length()));
+                myIntervalsCleanedForHexa = intervalCheck1.getMyTrueScales(hexatonicIntervalsForAll);
                 
                 //testausta varten *************************************************
-                System.out.println("octatonicIntervalsForAll6:");
-                for (String t :hexatonicIntervalsForAll6 ){
+                System.out.println("octatonicIntervalsForAll:");
+                for (String t :hexatonicIntervalsForAll ){
                 System.out.println(t);
                 }
                 //testausta varten
-                System.out.println("myIntervalsCleanedForOcta6:");
-                for (String t : myIntervalsCleanedForHexa6){
+                System.out.println("myIntervalsCleanedForOcta:");
+                for (String t : myIntervalsCleanedForHexa){
                 System.out.println(t);
                 }
                 //*******************************************************************
                 
                 System.out.println("Hexatoniset asteikot:");
-                for (String t : myIntervalsCleanedForHexa6) {
+                for (String t : myIntervalsCleanedForHexa) {
                     System.out.println(t + " = " + scales.getScales(t));
                 }
-                if (myIntervalsCleanedForHexa6.length == 0) {
+                if (myIntervalsCleanedForHexa.length == 0) {
                     System.out.println("N.A.");
                 }
 
                 // Heptatoniset asteikeot
-                heptatonicIntervalsForAll6 = heptatonic.getAllHeptatonicIntervals(Integer.toString(intervallit.length()));
-                myIntervalsCleanedForHepta6 = intervalCheck2.getMyTrueScales(heptatonicIntervalsForAll6);
+                heptatonicIntervalsForAll = heptatonic.getAllHeptatonicIntervals(Integer.toString(intervallit.length()));
+                myIntervalsCleanedForHepta = intervalCheck2.getMyTrueScales(heptatonicIntervalsForAll);
                 System.out.println("Heptatoniset asteikot:");
-                for (String t : myIntervalsCleanedForHepta6) {
+                for (String t : myIntervalsCleanedForHepta) {
                     System.out.println(t + " = " + scales.getScales(t));
                 }
-                if (myIntervalsCleanedForHepta6.length == 0) {
+                if (myIntervalsCleanedForHepta.length == 0) {
                     System.out.println("N.A.");
                 }
 
                 //Oktatoniset asteikot
-                octatonicIntervalsForAll6 = octatonic.getAllOctatonicIntervals(Integer.toString(intervallit.length()));
-                myIntervalsCleanedForOcta6 = intervalCheck3.getMyTrueScales(octatonicIntervalsForAll6);
+                octatonicIntervalsForAll = octatonic.getAllOctatonicIntervals(Integer.toString(intervallit.length()));
+                myIntervalsCleanedForOcta = intervalCheck3.getMyTrueScales(octatonicIntervalsForAll);
                 System.out.println("Oktatoniset asteikot:");
-                for (String t : myIntervalsCleanedForOcta6) {
+                for (String t : myIntervalsCleanedForOcta) {
                     System.out.println(t + " = " + scales.getScales(t));
                 }
-                if (myIntervalsCleanedForOcta6.length == 0) {
+                if (myIntervalsCleanedForOcta.length == 0) {
                     System.out.println("N.A.");
                 }
                 break;
@@ -349,53 +320,53 @@ public class MainActivity {
                 }
 
                 // Heptatoniset asteikeot
-                heptatonicIntervalsForAll7 = heptatonic.getAllHeptatonicIntervals(Integer.toString(intervallit.length()));
-                myIntervalsCleanedForHepta7 = intervalCheck1.getMyTrueScales(heptatonicIntervalsForAll7);
+                heptatonicIntervalsForAll = heptatonic.getAllHeptatonicIntervals(Integer.toString(intervallit.length()));
+                myIntervalsCleanedForHepta = intervalCheck1.getMyTrueScales(heptatonicIntervalsForAll);
                 
                 
                 //testausta varten *************************************************
-                System.out.println("heptatonicIntervalsForAll7:");
-                for (String t :heptatonicIntervalsForAll7 ){
+                System.out.println("heptatonicIntervalsForAll:");
+                for (String t :heptatonicIntervalsForAll ){
                 System.out.println(t);
                 }
                 //testausta varten
-                System.out.println("myIntervalsCleanedForOcta7:");
-                for (String t : myIntervalsCleanedForHepta7){
+                System.out.println("myIntervalsCleanedForOcta:");
+                for (String t : myIntervalsCleanedForHepta){
                 System.out.println(t);
                 }
                 //*******************************************************************
                 
                 
                 System.out.println("Heptatoniset asteikot:");
-                for (String t : myIntervalsCleanedForHepta7) {
+                for (String t : myIntervalsCleanedForHepta) {
                     System.out.println(t + " = " + scales.getScales(t));
                 }
-                if (myIntervalsCleanedForHepta7.length == 0) {
+                if (myIntervalsCleanedForHepta.length == 0) {
                     System.out.println("N.A.");
                 }
 
                 // Oktatoniset asteikot
-                octatonicIntervalsForAll7 = octatonic.getAllOctatonicIntervals(Integer.toString(intervallit.length()));
-                //System.out.println(Arrays.toString(octatonicIntervalsAll7));
-                myIntervalsCleanedForOcta7 = intervalCheck2.getMyTrueScales(octatonicIntervalsForAll7);
+                octatonicIntervalsForAll = octatonic.getAllOctatonicIntervals(Integer.toString(intervallit.length()));
+                //System.out.println(Arrays.toString(octatonicIntervalsAll));
+                myIntervalsCleanedForOcta = intervalCheck2.getMyTrueScales(octatonicIntervalsForAll);
                 
                 //testausta varten**************************************************************
-                System.out.println("octatonicIntervalsForAll7:");
-                for (String t :octatonicIntervalsForAll7 ){
+                System.out.println("octatonicIntervalsForAll:");
+                for (String t :octatonicIntervalsForAll ){
                 System.out.println(t);
                 }
                 //testausta varten
                 System.out.println("myIntervalsCleanedOcta:");
-                for (String t : myIntervalsCleanedForOcta7){
+                for (String t : myIntervalsCleanedForOcta){
                 System.out.println(t);
                 }
                 //******************************************************************************
                 
                 System.out.println("Oktatoniset asteikot:");
-                for (String t : myIntervalsCleanedForOcta7) {
+                for (String t : myIntervalsCleanedForOcta) {
                     System.out.println(t + " = " + scales.getScales(t));
                 }
-                if (myIntervalsCleanedForOcta7.length == 0) {
+                if (myIntervalsCleanedForOcta.length == 0) {
                     System.out.println("N.A.");
                 }
 
@@ -413,26 +384,26 @@ public class MainActivity {
                     }
                 }
 
-                octatonicIntervalsForAll8 = octatonic.getAllOctatonicIntervals(Integer.toString(intervallit.length()));
-                myIntervalsCleanedForOcta8 = intervalCheck1.getMyTrueScales(octatonicIntervalsForAll8);
+                octatonicIntervalsForAll = octatonic.getAllOctatonicIntervals(Integer.toString(intervallit.length()));
+                myIntervalsCleanedForOcta = intervalCheck1.getMyTrueScales(octatonicIntervalsForAll);
                 
                 //testausta varten *************************************************
-                System.out.println("octatonicIntervalsForAll8:");
-                for (String t :octatonicIntervalsForAll8 ){
+                System.out.println("octatonicIntervalsForAll:");
+                for (String t :octatonicIntervalsForAll ){
                 System.out.println(t);
                 }
                 //testausta varten
-                System.out.println("myIntervalsCleanedForOcta8:");
-                for (String t : myIntervalsCleanedForOcta8){
+                System.out.println("myIntervalsCleanedForOcta:");
+                for (String t : myIntervalsCleanedForOcta){
                 System.out.println(t);
                 }
                 //*******************************************************************
 
                 System.out.println("Oktatoniset asteikot:");
-                for (String t : myIntervalsCleanedForOcta8) {
+                for (String t : myIntervalsCleanedForOcta) {
                     System.out.println(t + " = " + scales.getScales(t));
                 }
-                if (myIntervalsCleanedForOcta8.length == 0) {
+                if (myIntervalsCleanedForOcta.length == 0) {
                     System.out.println("N.A.");
                 }
                 break;
