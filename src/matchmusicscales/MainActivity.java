@@ -330,7 +330,7 @@ public class MainActivity {
                 System.out.println(t);
                 }
                 //testausta varten
-                System.out.println("myIntervalsCleanedForOcta:");
+                System.out.println("myIntervalsCleanedForHepta:");
                 for (String t : myIntervalsCleanedForHepta){
                 System.out.println(t);
                 }
