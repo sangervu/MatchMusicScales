@@ -17,21 +17,9 @@ import static matchmusicscales.PentatonicIntervals.scaleCounter;
  */
 public class HexatonicIntervals {
 
-    /**
-     *
-     */
     public static LinkedHashSet<String> hashList;
     private String[] hexatonicIntervals = new String[6];
-
-    /**
-     *
-     */
     public String[] hexatonicIntervalsAll = new String[384];
-
-    /**
-     *
-     */
-    public String[] myIntervalsCleaned = new String[54612];
 
     char H = 'H'; //Half Step
     char W = 'W'; // Whole Step

@@ -14,17 +14,9 @@ import java.util.Collections;
  */
 public class HeptatonicIntervals {
 
-    /**
-     *
-     */
     public static LinkedHashSet<String> hashList;
     private String[] heptatonicIntervals = new String[7];
-
-    /**
-     *
-     */
     public String[] heptatonicIntervalsAll = new String[1791];
-    //public String[] myIntervalsCleaned = new String[54612];
 
     char H = 'H'; //Half Step
     char W = 'W'; // Whole Step

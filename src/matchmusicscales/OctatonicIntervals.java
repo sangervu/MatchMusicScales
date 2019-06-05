@@ -14,15 +14,8 @@ import java.util.Collections;
  */
 public class OctatonicIntervals {
 
-    /**
-     *
-     */
     public static LinkedHashSet<String> hashList;
     private String[] octatonicIntervals = new String[8];
-
-    /**
-     *
-     */
     public String[] octatonicIntervalsAll = new String[80];
 
     char H = 'H'; //Half Step

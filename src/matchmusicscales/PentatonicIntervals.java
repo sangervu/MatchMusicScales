@@ -12,21 +12,9 @@ import java.util.Collections;
  */
 public class PentatonicIntervals {
 
-    /**
-     *
-     */
     public static LinkedHashSet<String> hashList;
     private String[] pentatonicIntervals = new String[5];
-
-    /**
-     *
-     */
     public String[] pentatonicIntervalsAll = new String[80];
-
-    /**
-     *
-     */
-    public String[] myIntervalsCleaned = new String[54612];
 
     char H = 'H'; //Half Step
     char W = 'W'; // Whole Step
