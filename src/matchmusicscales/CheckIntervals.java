@@ -18,6 +18,7 @@ public class CheckIntervals {
     MusicScales scales = new MusicScales();
 
     private int laskuri = -1;
+
     /**
      *
      * @param intervals
@@ -28,7 +29,6 @@ public class CheckIntervals {
         MusicScales scales = new MusicScales();
 
         //int laskuri = -1;
-
         //puhdistetun taulukon koko, jossa kaikki ovat potentiaalisia skaaloja
         //luupin pituus saa olla max taulukon koko
         for (String t : intervals) {
@@ -72,10 +72,13 @@ public class CheckIntervals {
     }
 
     //Tämä metodi ei ole käytössä (vielä)
-    public void resetScales() {
-        
-        laskuri=-1;
+    public String[] clearArrays(String[] array) {
 
+     for (int i= 0; i < array.length; i++){
+      array[i]= null;
+     }
+    
+    return array;
     }
 
 }
