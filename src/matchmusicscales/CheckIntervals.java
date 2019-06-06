@@ -11,8 +11,8 @@ import java.util.List;
  */
 public class CheckIntervals {
 
-    String[] myIntervalsReal = new String[10000]; //Taulukon koko pitää olla riittävän suuri
-    String[] myIntervalsCleaned = new String[1000];
+    String[] myIntervalsReal = new String[78]; //Taulukon koko pitää olla riittävän suuri
+    String[] myIntervalsCleaned = new String[7];
     LinkedHashSet<String> hashList;
 
     MusicScales scales = new MusicScales();
@@ -72,7 +72,7 @@ public class CheckIntervals {
     }
 
     //Tämä metodi ei ole käytössä (vielä)
-    public String[] clearArrays(String[] array) {
+    public String[] getClearedArrays(String[] array) {
 
      for (int i= 0; i < array.length; i++){
       array[i]= null;
